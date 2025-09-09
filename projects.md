@@ -58,9 +58,6 @@ Sản phẩm nộp:
 * **DB**: MySQL, PostgreSQL, MongoDB.
 * **Tích hợp**: Thanh toán (PayPal, MoMo, VNPAY), Giao hàng (GHN, GrabExpress), Bản đồ (Google Maps API), Realtime (Socket.io, WebRTC).
 
-
-## 📌 Gợi ý đề tài Đồ án nhóm (5 SV)
-
 ### 1. **Website bán hàng trực tuyến (B2C)**
 
 * Ví dụ: bán quần áo, giày, hoa, mỹ phẩm.
