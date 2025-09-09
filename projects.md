@@ -1,6 +1,12 @@
-Danh sách đồ án gợi ý môn học "Thiết kế Hệ thống TMĐT"
+# Danh sách đồ án gợi ý môn học "Thiết kế Hệ thống TMĐT"
 
-Rất hay 👌. Với môn **Thiết kế Hệ thống Thương mại điện tử**, đồ án nhóm 5 SV nên có độ phức tạp vừa đủ để:
+Sản phẩm nộp:
+
+* **Tài liệu phân tích & thiết kế** (Use Case, Sequence, Class Diagram, ERD, Kiến trúc).
+* **Triển khai hệ thống** (demo website/app).
+* **Trình bày báo cáo nhóm** (chia vai trò).
+
+Đồ án nhóm 5 SV nên có độ phức tạp vừa đủ để:
 
 * Có **nghiệp vụ TMĐT rõ ràng** (giỏ hàng, thanh toán, quản lý đơn hàng...).
 * Chia được **vai trò công việc** cho 5 người (phân tích, thiết kế, frontend, backend, tích hợp).
@@ -8,105 +14,7 @@ Rất hay 👌. Với môn **Thiết kế Hệ thống Thương mại điện t�
 
 ---
 
-## 📌 Gợi ý đề tài Đồ án nhóm (5 SV)
-
-### 1. **Website bán hàng trực tuyến (B2C)**
-
-* Ví dụ: bán quần áo, giày, hoa, mỹ phẩm.
-* Yêu cầu:
-
-  * Đăng nhập/đăng ký khách hàng.
-  * Quản lý sản phẩm (CRUD).
-  * Giỏ hàng, thanh toán (tích hợp MoMo hoặc giả lập).
-  * Theo dõi đơn hàng.
-* Phân chia công việc:
-
-  * 1 bạn làm **UI/UX** (Figma + Frontend).
-  * 2 bạn làm **Backend + API**.
-  * 1 bạn **Database + ERD + Sequence diagram**.
-  * 1 bạn làm **Tích hợp Payment/Logistics + Kiểm thử**.
-
----
-
-### 2. **Sàn TMĐT mini (Multi-vendor marketplace)**
-
-* Ví dụ: “Shopee thu nhỏ”.
-* Chức năng:
-
-  * Người bán đăng sản phẩm.
-  * Người mua đặt hàng, thanh toán.
-  * Hệ thống quản lý hoa hồng cho sàn.
-* Phân chia:
-
-  * 2 bạn làm **quản lý người bán & sản phẩm**.
-  * 2 bạn làm **quản lý khách hàng & đơn hàng**.
-  * 1 bạn làm **tích hợp thanh toán + quản trị hệ thống**.
-
----
-
-### 3. **Hệ thống đặt đồ ăn online (Food Delivery App)**
-
-* Giống GrabFood/NowFood.
-* Yêu cầu:
-
-  * Người dùng đặt món từ nhiều nhà hàng.
-  * Giỏ hàng, thanh toán COD/online.
-  * Hệ thống giao hàng (tích hợp API hoặc mô phỏng).
-* Phân chia:
-
-  * 1 bạn **UX + Frontend mobile/web**.
-  * 2 bạn **Backend đặt món & thanh toán**.
-  * 1 bạn **Database + Analytics (doanh thu, đơn hàng)**.
-  * 1 bạn **API giao hàng + bảo mật**.
-
----
-
-### 4. **Hệ thống đặt vé sự kiện / rạp phim online**
-
-* Chức năng:
-
-  * Người dùng chọn sự kiện/phim.
-  * Đặt chỗ, chọn ghế.
-  * Thanh toán và gửi vé điện tử (QR code).
-* Phân chia:
-
-  * 1 bạn làm **UI chọn ghế**.
-  * 1 bạn **API đặt vé**.
-  * 1 bạn **Payment Gateway**.
-  * 1 bạn **Database & ERD**.
-  * 1 bạn **Bảo mật & quản trị**.
-
----
-
-### 5. **Hệ thống bán hàng tích hợp AI Chatbot**
-
-* Giống “assistant” cho cửa hàng online.
-* Chức năng:
-
-  * Website bán sản phẩm.
-  * Chatbot AI tư vấn sản phẩm (gợi ý theo từ khóa).
-  * Thanh toán online.
-* Phân chia:
-
-  * 2 bạn làm **website bán hàng**.
-  * 1 bạn làm **tích hợp Chatbot AI (Dialogflow/OpenAI API)**.
-  * 1 bạn làm **database & backend**.
-  * 1 bạn làm **kiểm thử & tài liệu UML**.
-
----
-
-👉 Mỗi đề tài đều có thể yêu cầu:
-
-* **Tài liệu phân tích & thiết kế** (Use Case, Sequence, Class Diagram, ERD, Kiến trúc).
-* **Triển khai hệ thống** (demo website/app).
-* **Trình bày báo cáo nhóm** (chia vai trò).
-
----
-
-Bạn muốn mình làm **bảng phân chia công việc mẫu cho nhóm 5 người** (role + nhiệm vụ chi tiết) không?
-
-
-# 📌 Bảng gợi ý đề tài đồ án nhóm (5 SV) – Thiết kế Hệ thống TMĐT
+# 📌 Gợi ý đề tài đồ án nhóm (5 SV)
 
 | #  | Tên đề tài                          | Mô tả ngắn                        | Chức năng chính                        | Công nghệ gợi ý                   |
 | -- | ----------------------------------- | --------------------------------- | -------------------------------------- | --------------------------------- |
@@ -143,8 +51,6 @@ Bạn muốn mình làm **bảng phân chia công việc mẫu cho nhóm 5 ngư�
 | 31 | Học từ vựng ngoại ngữ               | Vocab App                         | Flashcard, quiz, API dịch              | React Native, Express, Firebase   |
 | 32 | Bán hàng livestream                 | Livestream E-commerce             | Livestream + chat + đặt hàng           | React, Node.js (WebRTC), MongoDB  |
 
----
-
 📌 Ghi chú:
 
 * **Front-end**: React, Vue.js, Angular, Next.js, Nuxt.js.
@@ -153,12 +59,57 @@ Bạn muốn mình làm **bảng phân chia công việc mẫu cho nhóm 5 ngư�
 * **Tích hợp**: Thanh toán (PayPal, MoMo, VNPAY), Giao hàng (GHN, GrabExpress), Bản đồ (Google Maps API), Realtime (Socket.io, WebRTC).
 
 
------------CHI TIẾT----------------------
-Rất tốt 👍. Mình sẽ gợi ý thêm **10 đề tài Đồ án nhóm (5 SV)**, mỗi đề tài đều có tính ứng dụng thực tiễn và có thể phân chia vai trò rõ ràng.
+## 📌 Gợi ý đề tài Đồ án nhóm (5 SV)
+
+### 1. **Website bán hàng trực tuyến (B2C)**
+
+* Ví dụ: bán quần áo, giày, hoa, mỹ phẩm.
+* Yêu cầu:
+
+  * Đăng nhập/đăng ký khách hàng.
+  * Quản lý sản phẩm (CRUD).
+  * Giỏ hàng, thanh toán (tích hợp MoMo hoặc giả lập).
+  * Theo dõi đơn hàng.
 
 ---
 
-## 📌 10 Đề tài bổ sung
+### 2. **Sàn TMĐT mini (Multi-vendor marketplace)**
+
+* Ví dụ: “Shopee thu nhỏ”.
+* Chức năng:
+
+  * Người bán đăng sản phẩm.
+  * Người mua đặt hàng, thanh toán.
+  * Hệ thống quản lý hoa hồng cho sàn.
+---
+
+### 3. **Hệ thống đặt đồ ăn online (Food Delivery App)**
+
+* Giống GrabFood/NowFood.
+* Yêu cầu:
+
+  * Người dùng đặt món từ nhiều nhà hàng.
+  * Giỏ hàng, thanh toán COD/online.
+  * Hệ thống giao hàng (tích hợp API hoặc mô phỏng).
+---
+
+### 4. **Hệ thống đặt vé sự kiện / rạp phim online**
+
+* Chức năng:
+
+  * Người dùng chọn sự kiện/phim.
+  * Đặt chỗ, chọn ghế.
+  * Thanh toán và gửi vé điện tử (QR code).
+---
+
+### 5. **Hệ thống bán hàng tích hợp AI Chatbot**
+
+* Giống “assistant” cho cửa hàng online.
+* Chức năng:
+
+  * Website bán sản phẩm.
+  * Chatbot AI tư vấn sản phẩm (gợi ý theo từ khóa).
+  * Thanh toán online.
 
 ### 6. **Hệ thống đấu giá trực tuyến (Online Auction)**
 
@@ -237,24 +188,6 @@ Rất tốt 👍. Mình sẽ gợi ý thêm **10 đề tài Đồ án nhóm (5 S
 * Giống Shopee Live, TikTok Shop mini.
 * Người bán livestream, người mua chat và đặt hàng ngay trên nền tảng.
 * Tích hợp ví điện tử để thanh toán.
-
----
-
-👉 Tổng hợp lại, bạn đã có **15 đề tài** (5 cái mình gợi ý trước + 10 bổ sung).
-Tất cả đều có thể phân chia nhóm 5 người với vai trò:
-
-1. **Phân tích & thiết kế (UML, ERD, kiến trúc).**
-2. **Frontend (Web/App).**
-3. **Backend & API.**
-4. **Database & Tích hợp dịch vụ ngoài (Payment/Logistics).**
-5. **Kiểm thử & tài liệu, demo.**
-
----
-
-Bạn có muốn mình làm **bảng phân công vai trò cụ thể cho nhóm 5 người** theo từng đề tài (ví dụ: Food Delivery, E-learning, Marketplace) để SV dễ áp dụng không?
-
-
-Ok, mình sẽ gợi ý thêm **10 đề tài đồ án Web/E-commerce** ở mức độ vừa phải (tập trung vào giao diện, API, dữ liệu có sẵn) để phù hợp cho sinh viên:
 
 ---
 
@@ -338,16 +271,6 @@ Ok, mình sẽ gợi ý thêm **10 đề tài đồ án Web/E-commerce** ở m�
 
 ---
 
-👉 Các đề tài này đều có thể phát triển theo 3 mức: **Cơ bản (quản lý CRUD), Nâng cao (tích hợp thanh toán/giao hàng), Chuyên sâu (AI/Analytics/Realtime API).**
-
-Bạn có muốn mình gom tất cả **22 đề tài** thành một **bảng so sánh ngắn gọn (mục tiêu – chức năng chính – công nghệ gợi ý)** để sinh viên dễ chọn không?
-
-
-
-Rồi 👍 mình sẽ bổ sung thêm **10 đề tài mới** để tổng hợp thêm lựa chọn cho nhóm SV (5 người). Các đề tài này vừa có tính **thực tế** vừa có độ **phức tạp vừa phải** để phù hợp làm đồ án:
-
----
-
 ### 23. Hệ thống đấu giá trực tuyến (Online Auction)
 
 * Người dùng đăng sản phẩm để đấu giá.
@@ -428,14 +351,7 @@ Rồi 👍 mình sẽ bổ sung thêm **10 đề tài mới** để tổng hợp
 
 ---
 
-👉 Vậy là mình đã gợi ý tổng cộng **32 đề tài** cho đồ án nhóm.
-
-Bạn có muốn mình gom lại thành một **bảng Excel/Markdown** liệt kê **tên đề tài – mô tả ngắn – chức năng chính – công nghệ gợi ý** để SV dễ so sánh và chọn không?
-
-
--------------------------------
-
-Mình sẽ mô tả chi tiết **Đồ án 12: Hệ thống cửa hàng tạp hóa online (Grocery Delivery)** theo từng phần để bạn dễ dùng cho giảng dạy hoặc triển khai:
+# Mô tả chi tiết **Đồ án 12: Hệ thống cửa hàng tạp hóa online (Grocery Delivery)** :
 
 ---
 
@@ -526,12 +442,7 @@ Mình sẽ mô tả chi tiết **Đồ án 12: Hệ thống cửa hàng tạp h�
 
 ---
 
-👉 Nếu bạn muốn, mình có thể viết luôn **Use Case Diagram + ERD mẫu** cho hệ thống này để sinh viên dễ hình dung. Bạn có muốn mình làm phần đó luôn không?
-
-
---------------------------
-
-Rất hay 👌, mình sẽ mô tả chi tiết đề tài **Hệ thống bán vé xe khách / tàu hỏa trực tuyến** (mức độ nhóm SV 5 người có thể làm):
+# Mô tả chi tiết đề tài **Hệ thống bán vé xe khách / tàu hỏa trực tuyến**:
 
 ---
 
@@ -604,9 +515,3 @@ Xây dựng một hệ thống đặt vé xe khách / tàu hỏa trực tuyến 
 * Check-in online (scan QR code tại cổng).
 * Tích hợp bản đồ hiển thị tuyến đường đi.
 * Quản lý khuyến mãi, mã giảm giá.
-
----
-
-👉 Đề tài này khá **thực tế**, nhiều nhóm SV đã chọn vì kết hợp được: **CRUD + Realtime + Thanh toán + QR code**, vừa học được nhiều kỹ thuật vừa có tính ứng dụng cao.
-
-Bạn có muốn mình vẽ **sơ đồ kiến trúc + sơ đồ ERD minh họa trực quan** cho đề tài này để nhóm SV dễ hình dung không?
