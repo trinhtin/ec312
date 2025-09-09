@@ -1,6 +1,6 @@
 # Danh sách đồ án gợi ý môn học "Thiết kế Hệ thống TMĐT"
 
-Sản phẩm nộp:
+## I. Sản phẩm nộp:
 
 * **Tài liệu phân tích & thiết kế** (Use Case, Sequence, Class Diagram, ERD, Kiến trúc).
 * **Triển khai hệ thống** (demo website/app).
@@ -14,7 +14,7 @@ Sản phẩm nộp:
 
 ---
 
-# 📌 Gợi ý đề tài đồ án nhóm (5 SV)
+## II. Gợi ý đề tài đồ án nhóm (5 SV)
 
 | #  | Tên đề tài                          | Mô tả ngắn                        | Chức năng chính                        | Công nghệ gợi ý                   |
 | -- | ----------------------------------- | --------------------------------- | -------------------------------------- | --------------------------------- |
@@ -348,11 +348,11 @@ Sản phẩm nộp:
 
 ---
 
-# Mô tả chi tiết **Đồ án 12: Hệ thống cửa hàng tạp hóa online (Grocery Delivery)** :
+## III. Mô tả chi tiết "Hệ thống cửa hàng tạp hóa online (Grocery Delivery)" :
 
 ---
 
-## 1. Mục tiêu dự án
+### 1. Mục tiêu dự án
 
 * Xây dựng một website (hoặc web app/mobile app) cho phép người dùng đặt mua các mặt hàng tạp hóa, rau củ, thực phẩm và hàng thiết yếu.
 * Quản lý kho hàng (tồn kho, nhập hàng, cập nhật số lượng tự động khi có đơn).
@@ -361,9 +361,9 @@ Sản phẩm nộp:
 
 ---
 
-## 2. Chức năng chính
+### 2. Chức năng chính
 
-### a. Chức năng người dùng (Customer)
+#### a. Chức năng người dùng (Customer)
 
 * Đăng ký/Đăng nhập (qua email, số điện thoại, Google/Facebook).
 * Tìm kiếm sản phẩm theo tên, danh mục (rau củ, thịt cá, đồ khô, nhu yếu phẩm…).
@@ -373,7 +373,7 @@ Sản phẩm nộp:
 * Theo dõi trạng thái đơn hàng (Đang chuẩn bị → Đang giao → Hoàn thành).
 * Đánh giá và phản hồi sản phẩm.
 
-### b. Chức năng quản trị (Admin/Store Owner)
+#### b. Chức năng quản trị (Admin/Store Owner)
 
 * Quản lý sản phẩm (thêm, sửa, xóa, cập nhật tồn kho).
 * Quản lý danh mục sản phẩm.
@@ -381,14 +381,14 @@ Sản phẩm nộp:
 * Quản lý khách hàng (danh sách, lịch sử mua hàng).
 * Báo cáo doanh thu, thống kê sản phẩm bán chạy.
 
-### c. Chức năng tích hợp giao hàng
+#### c. Chức năng tích hợp giao hàng
 
 * Kết nối API GrabExpress, GHN, GHTK để tạo đơn giao hàng tự động.
 * Theo dõi trạng thái vận chuyển (tự động cập nhật từ API).
 
 ---
 
-## 3. Công nghệ đề xuất
+### 3. Công nghệ đề xuất
 
 * **Frontend:** ReactJS / VueJS / Angular (hoặc PHP thuần cho mức cơ bản).
 * **Backend:** NodeJS (Express) / Laravel / Django.
@@ -398,21 +398,21 @@ Sản phẩm nộp:
 
 ---
 
-## 4. Phạm vi triển khai (theo mức độ sinh viên)
+### 4. Phạm vi triển khai (theo mức độ sinh viên)
 
-### Mức cơ bản (Beginner)
+#### Mức cơ bản (Beginner)
 
 * Đặt hàng online + quản lý giỏ hàng.
 * Quản lý sản phẩm, tồn kho thủ công.
 * Đơn hàng lưu database, chưa cần API giao hàng.
 
-### Mức nâng cao (Intermediate)
+#### Mức nâng cao (Intermediate)
 
 * Tích hợp thanh toán online.
 * Quản lý tồn kho tự động khi đơn hàng xác nhận.
 * Báo cáo đơn giản (doanh thu, đơn hàng theo ngày).
 
-### Mức chuyên sâu (Advanced)
+#### Mức chuyên sâu (Advanced)
 
 * Tích hợp API giao hàng nhanh (GrabExpress, GHN).
 * Theo dõi trạng thái đơn hàng realtime.
@@ -421,7 +421,7 @@ Sản phẩm nộp:
 
 ---
 
-## 5. Yêu cầu phi chức năng
+### 5. Yêu cầu phi chức năng
 
 * Giao diện thân thiện, hỗ trợ mobile responsive.
 * Bảo mật tài khoản (JWT/OAuth2).
@@ -430,7 +430,7 @@ Sản phẩm nộp:
 
 ---
 
-## 6. Sản phẩm bàn giao
+### 6. Sản phẩm bàn giao
 
 * Website hoàn chỉnh (hoặc mobile app prototype).
 * Tài liệu phân tích (Use Case, ERD, Sequence Diagram).
@@ -439,19 +439,19 @@ Sản phẩm nộp:
 
 ---
 
-# Mô tả chi tiết đề tài **Hệ thống bán vé xe khách / tàu hỏa trực tuyến**:
+## III. Mô tả chi tiết "Hệ thống bán vé xe khách / tàu hỏa trực tuyến":
 
 ---
 
-## 🎯 Mục tiêu đồ án
+### 🎯 Mục tiêu đồ án
 
 Xây dựng một hệ thống đặt vé xe khách / tàu hỏa trực tuyến cho phép người dùng **tìm chuyến – chọn ghế – thanh toán online – nhận vé điện tử (QR code)**.
 
 ---
 
-## ⚙️ Chức năng chính
+### ⚙️ Chức năng chính
 
-### 1. Người dùng (Khách hàng)
+#### 1. Người dùng (Khách hàng)
 
 * Đăng ký/Đăng nhập.
 * Tìm chuyến theo ngày, giờ, tuyến, loại xe/tàu.
@@ -460,14 +460,14 @@ Xây dựng một hệ thống đặt vé xe khách / tàu hỏa trực tuyến 
 * Nhận vé điện tử dưới dạng **QR code** để check-in.
 * Quản lý lịch sử đặt vé.
 
-### 2. Quản trị viên (Admin)
+#### 2. Quản trị viên (Admin)
 
 * Quản lý chuyến xe/tàu (tuyến, giờ khởi hành, phương tiện, giá vé).
 * Quản lý sơ đồ ghế ngồi.
 * Xem thống kê số vé bán ra, doanh thu.
 * Quản lý người dùng & đơn hàng.
 
-### 3. Tích hợp kỹ thuật
+#### 3. Tích hợp kỹ thuật
 
 * **Realtime seat booking**: ghế đã chọn hiển thị ngay cho người khác (Socket.io/WebSocket).
 * **QR code ticketing**: vé điện tử với mã QR để quét khi check-in.
@@ -475,7 +475,7 @@ Xây dựng một hệ thống đặt vé xe khách / tàu hỏa trực tuyến 
 
 ---
 
-## 🏗️ Kiến trúc hệ thống
+### 🏗️ Kiến trúc hệ thống
 
 * **Front-end**: ReactJS / VueJS (UI chọn chuyến, sơ đồ ghế).
 * **Back-end**: Node.js (Express/NestJS) hoặc Django REST API.
@@ -486,7 +486,7 @@ Xây dựng một hệ thống đặt vé xe khách / tàu hỏa trực tuyến 
 
 ---
 
-## 📊 ERD (Entities – mô tả)
+### 📊 ERD (Entities – mô tả)
 
 * **User** (id, name, email, password, role).
 * **Trip** (id, route, vehicle, start\_time, end\_time, price).
@@ -496,7 +496,7 @@ Xây dựng một hệ thống đặt vé xe khách / tàu hỏa trực tuyến 
 
 ---
 
-## 📐 Ví dụ Sequence Diagram (Đặt vé)
+### 📐 Ví dụ Sequence Diagram (Đặt vé)
 
 1. User chọn tuyến → hệ thống hiển thị chuyến.
 2. User chọn chuyến + ghế → hệ thống kiểm tra ghế còn trống.
