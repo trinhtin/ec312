@@ -1,3 +1,256 @@
+Business requirement là **những yêu cầu cấp cao phản ánh mục tiêu, lợi ích, và nhu cầu kinh doanh** (không phải chi tiết chức năng cụ thể). Nó trả lời câu hỏi: *Doanh nghiệp muốn đạt được gì khi xây dựng hệ thống?*
+
+Ví dụ trong **hệ thống TMĐT (E-commerce)**:
+
+---
+
+### 📌 Ví dụ Business Requirements
+
+1. **Tăng doanh thu trực tuyến**
+
+   * Doanh nghiệp muốn hệ thống TMĐT giúp mở rộng thị trường và tăng doanh thu bán hàng trực tuyến ít nhất 30% trong 12 tháng tới.
+
+2. **Cải thiện trải nghiệm khách hàng**
+
+   * Cần có nền tảng bán hàng online giúp khách hàng dễ dàng tìm kiếm, đặt hàng và thanh toán trong vòng < 3 phút.
+
+3. **Hỗ trợ đa kênh (Omni-channel)**
+
+   * Hệ thống cần đồng bộ tồn kho giữa website, ứng dụng di động và cửa hàng offline.
+
+4. **Giảm chi phí vận hành**
+
+   * Tự động hóa xử lý đơn hàng, thanh toán và kết nối logistics để giảm 20% chi phí vận hành.
+
+5. **Mở rộng thị trường quốc tế**
+
+   * Hỗ trợ đa ngôn ngữ (tiếng Việt, tiếng Anh) và nhiều loại tiền tệ để phục vụ khách hàng ở Đông Nam Á.
+
+---
+
+👉 Business Requirement là **mục tiêu lớn của doanh nghiệp**, từ đó BA (Business Analyst) sẽ phân rã thành **Functional Requirements** (chức năng cụ thể) và **Non-functional Requirements** (hiệu năng, bảo mật…).
+
+Bạn có muốn mình soạn **bảng phân rã mẫu** (Business Requirement → Functional Requirement → Use Case) cho một ví dụ cụ thể như *“Hoàn tiền sản phẩm”* hay *“Đặt hàng online”* để dễ hình dung hơn không?
+
+---------------------------------------------
+
+Functional Requirements (Yêu cầu chức năng) là **những gì hệ thống cần làm**, mô tả hành vi, chức năng hoặc dịch vụ mà hệ thống phải cung cấp để đáp ứng Business Requirements.
+
+Ví dụ trong một hệ thống **Website Bán Hàng Online**:
+
+---
+
+### Functional Requirements (Ví dụ)
+
+1. **Quản lý tài khoản người dùng**
+
+   * Hệ thống cho phép khách hàng đăng ký tài khoản mới bằng email hoặc số điện thoại.
+   * Hệ thống cho phép người dùng đăng nhập bằng email/số điện thoại và mật khẩu.
+   * Hệ thống cho phép người dùng đặt lại mật khẩu qua email xác thực.
+
+2. **Chức năng tìm kiếm và duyệt sản phẩm**
+
+   * Người dùng có thể tìm kiếm sản phẩm theo tên, loại, hoặc khoảng giá.
+   * Hệ thống hiển thị danh sách sản phẩm theo bộ lọc (giá, thương hiệu, độ phổ biến).
+   * Hệ thống cho phép người dùng sắp xếp kết quả tìm kiếm theo giá tăng/giảm dần.
+
+3. **Chức năng giỏ hàng**
+
+   * Người dùng có thể thêm sản phẩm vào giỏ hàng.
+   * Người dùng có thể cập nhật số lượng hoặc xóa sản phẩm trong giỏ hàng.
+   * Hệ thống tính tổng tiền giỏ hàng tự động khi có thay đổi.
+
+4. **Chức năng đặt hàng & thanh toán**
+
+   * Người dùng có thể chọn phương thức thanh toán (COD, thẻ, ví điện tử).
+   * Hệ thống tạo mã đơn hàng duy nhất cho mỗi giao dịch.
+   * Hệ thống gửi email xác nhận đơn hàng thành công cho khách hàng.
+
+5. **Chức năng quản trị (Admin)**
+
+   * Quản trị viên có thể thêm/sửa/xóa sản phẩm trong hệ thống.
+   * Quản trị viên có thể xem danh sách đơn hàng và thay đổi trạng thái (Đang xử lý, Đã giao, Đã hủy).
+   * Quản trị viên có thể tạo báo cáo doanh thu theo ngày/tháng/năm.
+
+---
+
+👉 Functional Requirements thường được viết chi tiết để làm cơ sở cho **Use Case** hoặc **thiết kế hệ thống**.
+
+Bạn có muốn mình làm **bảng phân rã tiếp** (Business Requirement → Functional Requirement → Use Case) cho ví dụ này luôn không?
+
+
+---------------------------------------------
+
+Non-functional requirements (Yêu cầu phi chức năng) là những ràng buộc hoặc tiêu chí chất lượng mà hệ thống phải đáp ứng, không liên quan trực tiếp đến **chức năng cụ thể**, mà đến **cách hệ thống hoạt động**.
+
+Ví dụ với **Website Bán Hàng Online**:
+
+---
+
+### Non-Functional Requirements (Ví dụ)
+
+1. **Hiệu năng (Performance)**
+
+   * Thời gian phản hồi của hệ thống không vượt quá **2 giây** cho 95% các yêu cầu tìm kiếm sản phẩm.
+   * Hệ thống có thể xử lý **1.000 giao dịch/giây** trong giờ cao điểm.
+
+2. **Khả năng mở rộng (Scalability)**
+
+   * Hệ thống phải hỗ trợ mở rộng để phục vụ ít nhất **1 triệu người dùng đồng thời**.
+
+3. **Bảo mật (Security)**
+
+   * Tất cả dữ liệu nhạy cảm (mật khẩu, số thẻ tín dụng) phải được **mã hóa AES-256**.
+   * Hệ thống yêu cầu xác thực hai yếu tố (2FA) cho tài khoản quản trị viên.
+
+4. **Tính sẵn sàng (Availability)**
+
+   * Hệ thống phải có độ sẵn sàng **99,9% uptime** mỗi tháng.
+   * Các dịch vụ quan trọng (đặt hàng, thanh toán) phải luôn khả dụng trong giờ hoạt động.
+
+5. **Khả năng sử dụng (Usability)**
+
+   * Người dùng mới phải có thể hoàn thành quy trình đăng ký tài khoản trong vòng **dưới 3 phút**.
+   * Giao diện website phải hỗ trợ **đa ngôn ngữ** (tiếng Việt, tiếng Anh).
+
+6. **Khả năng bảo trì (Maintainability)**
+
+   * Mỗi bản phát hành phần mềm phải có tài liệu hướng dẫn cập nhật (release note).
+   * Hệ thống cần có khả năng thay đổi cấu hình mà không cần khởi động lại.
+
+7. **Khả năng tương thích (Compatibility)**
+
+   * Website phải hoạt động tốt trên các trình duyệt phổ biến (Chrome, Firefox, Safari, Edge).
+   * Ứng dụng di động phải tương thích với Android (≥ 10) và iOS (≥ 14).
+
+---
+
+👉 Tóm lại:
+
+* **Functional requirement** = Hệ thống làm *cái gì* (what).
+* **Non-functional requirement** = Hệ thống làm *như thế nào* (how well).
+
+Bạn có muốn mình lập **bảng so sánh Functional vs Non-functional requirement** để dễ nhớ hơn không?
+
+-----------------------------
+Rất hay 👍 Mình sẽ làm một **bảng phân rã mẫu** cho ví dụ cụ thể: **Refund (Hoàn tiền sản phẩm)** trong hệ thống TMĐT.
+
+---
+
+## 📑 Bảng phân rã yêu cầu (Sample Decomposition)
+
+| Business Requirement (BR)                                                                           | Functional Requirement (FR)                                                       | Use Case (UC)                           |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------- |
+| BR1. Hệ thống cần hỗ trợ **hoàn tiền sản phẩm** để nâng cao sự tin tưởng và trải nghiệm khách hàng. | FR1. Người dùng có thể gửi yêu cầu hoàn tiền từ tài khoản của họ.                 | UC1: Submit Refund Request              |
+|                                                                                                     | FR2. Nhân viên CSKH có thể xem và duyệt/từ chối yêu cầu hoàn tiền.                | UC2: Review Refund Request              |
+|                                                                                                     | FR3. Hệ thống phải kết nối với Payment Gateway để xử lý giao dịch hoàn tiền.      | UC3: Process Refund via Payment Gateway |
+|                                                                                                     | FR4. Khách hàng phải nhận được thông báo (email/app) về trạng thái hoàn tiền.     | UC4: Notify Customer of Refund Result   |
+|                                                                                                     | FR5. Admin có thể xem báo cáo tổng hợp số lượng và giá trị các yêu cầu hoàn tiền. | UC5: Generate Refund Report             |
+
+---
+
+### 📝 Giải thích
+
+* **Business Requirement (BR):** Tầm nhìn/mục tiêu lớn của doanh nghiệp (*nâng cao sự tin tưởng khách hàng*).
+* **Functional Requirement (FR):** Hệ thống cần có những chức năng gì để hiện thực hóa mục tiêu.
+* **Use Case (UC):** Tương tác cụ thể giữa Actor và hệ thống để triển khai FR.
+
+---
+
+👉 Nếu cần đi sâu thêm, mình có thể viết tiếp **mapping sang Class Diagram + ERD** như bạn đã hỏi ở Refund trước (ví dụ `RefundRequest`, `RefundTransaction`, `RefundStatus`).
+
+Bạn có muốn mình soạn **Version đầy đủ (BR → FR → UC → Class/ERD Mapping)** cho ví dụ Refund này không?
+
+-----------------------------------------------
+Mình làm bảng so sánh để bạn dễ hình dung nhé 👇
+
+| Tiêu chí                           | **Functional Requirement**                                                                                                                              | **Non-functional Requirement**                                                                                                                                                                 |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Định nghĩa**                     | Mô tả **hệ thống phải làm gì** – các chức năng, dịch vụ, hành vi mà hệ thống cung cấp cho người dùng.                                                   | Mô tả **hệ thống phải hoạt động như thế nào** – các thuộc tính về chất lượng, hiệu suất, bảo mật, khả dụng…                                                                                    |
+| **Trả lời câu hỏi**                | *What does the system do?* – Hệ thống làm gì?                                                                                                           | *How well does the system perform?* – Hệ thống thực hiện tốt đến mức nào?                                                                                                                      |
+| **Ví dụ (Website TMĐT)**           | - Đăng ký/đăng nhập tài khoản. <br> - Tìm kiếm và lọc sản phẩm. <br> - Thêm sản phẩm vào giỏ hàng. <br> - Thanh toán bằng thẻ tín dụng hoặc ví điện tử. | - Thời gian phản hồi < 2 giây cho 95% truy vấn tìm kiếm. <br> - Hỗ trợ tối thiểu 1 triệu người dùng đồng thời. <br> - Uptime 99,9% mỗi tháng. <br> - Bảo mật dữ liệu bằng AES-256, hỗ trợ 2FA. |
+| **Đặc điểm**                       | - Cụ thể, gắn liền với nghiệp vụ. <br> - Có thể kiểm thử trực tiếp qua test case.                                                                       | - Mang tính ràng buộc, tiêu chí đánh giá chất lượng. <br> - Khó kiểm thử hơn, thường đo bằng chỉ số (metrics).                                                                                 |
+| **Mức độ hiển thị với người dùng** | Người dùng nhìn thấy trực tiếp (ví dụ: nút "Mua hàng").                                                                                                 | Người dùng cảm nhận gián tiếp (ví dụ: tốc độ tải trang, mức độ bảo mật).                                                                                                                       |
+
+👉 Hiểu ngắn gọn:
+
+* **Functional = Chức năng “có cái gì”**.
+* **Non-functional = Chất lượng “tốt đến đâu”**.
+
+---
+
+Bạn có muốn mình lấy **1 ví dụ thực tế đầy đủ (BR → FR → NFR → Use case)** để ghép thành chuỗi minh họa luôn không?
+
+-----------------------------------------
+Quá hay 👍 mình sẽ làm một ví dụ xuyên suốt để bạn thấy mối liên hệ:
+
+---
+
+## 🎯 Ví dụ: **Cửa hàng sách online**
+
+### 1. **Business Requirement (BR)**
+
+* Doanh nghiệp muốn xây dựng một **nền tảng bán sách online** để khách hàng có thể mua sách mọi lúc, mọi nơi, qua website hoặc mobile app.
+
+---
+
+### 2. **Functional Requirements (FR)**
+
+(Trích ra từ BR, mô tả chức năng cụ thể của hệ thống)
+
+* FR1: Người dùng có thể **tìm kiếm sách theo tên, tác giả, thể loại**.
+* FR2: Người dùng có thể **thêm sách vào giỏ hàng**.
+* FR3: Người dùng có thể **thanh toán đơn hàng** bằng thẻ ngân hàng hoặc ví điện tử.
+* FR4: Quản trị viên có thể **quản lý kho sách** (thêm, sửa, xóa, cập nhật tồn kho).
+
+---
+
+### 3. **Non-functional Requirements (NFR)**
+
+* Hệ thống phải phản hồi kết quả tìm kiếm trong **< 2 giây**.
+* Đảm bảo **99.9% uptime** mỗi tháng.
+* Thanh toán phải tuân thủ chuẩn bảo mật **PCI DSS** và dữ liệu nhạy cảm được **mã hóa AES-256**.
+* Website phải hỗ trợ **ít nhất 10.000 người dùng đồng thời**.
+
+---
+
+### 4. **Use Case (Ví dụ: “Mua sách”)**
+
+**Tên Use Case:** Mua sách online
+
+* **Actor:** Khách hàng
+* **Mục tiêu:** Khách hàng mua một hoặc nhiều cuốn sách thành công
+* **Tiền điều kiện:** Khách hàng có tài khoản và đăng nhập
+* **Luồng chính:**
+
+  1. Khách hàng tìm kiếm sách.
+  2. Chọn sách và thêm vào giỏ hàng.
+  3. Kiểm tra giỏ hàng và nhấn “Thanh toán”.
+  4. Nhập thông tin thanh toán (thẻ/ ví điện tử).
+  5. Nhận thông báo đơn hàng thành công.
+* **Ngoại lệ:**
+
+  * Thanh toán thất bại (hệ thống báo lỗi).
+  * Sách hết hàng (hiện thông báo & gợi ý sách khác).
+
+---
+
+👉 Như vậy bạn thấy chuỗi **BR → FR → NFR → Use Case** liên kết logic với nhau:
+
+* **BR** định hướng *kinh doanh cần gì*.
+* **FR** mô tả *hệ thống phải làm gì để đáp ứng BR*.
+* **NFR** mô tả *chất lượng vận hành hệ thống*.
+* **Use Case** cho thấy *từng chức năng FR hoạt động như thế nào trong thực tế*.
+
+---
+
+Bạn có muốn mình vẽ luôn **sơ đồ Use Case (PlantUML)** cho ví dụ “Mua sách online” này để sinh viên dễ hình dung không?
+
+---
+
+
+
+
 Câu hỏi này rất sát với thực tế trong **Thiết kế Hệ thống TMĐT** 👍.
 Mình sẽ triển khai theo hướng **phân tích yêu cầu → thiết kế → Use Case**.
 
