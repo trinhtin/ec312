@@ -1,3 +1,5 @@
+# 1. Business Requirements
+
 Business requirement là **những yêu cầu cấp cao phản ánh mục tiêu, lợi ích, và nhu cầu kinh doanh** (không phải chi tiết chức năng cụ thể). Nó trả lời câu hỏi: *Doanh nghiệp muốn đạt được gì khi xây dựng hệ thống?*
 
 Ví dụ trong **hệ thống TMĐT (E-commerce)**:
@@ -30,9 +32,8 @@ Ví dụ trong **hệ thống TMĐT (E-commerce)**:
 
 👉 Business Requirement là **mục tiêu lớn của doanh nghiệp**, từ đó BA (Business Analyst) sẽ phân rã thành **Functional Requirements** (chức năng cụ thể) và **Non-functional Requirements** (hiệu năng, bảo mật…).
 
-Bạn có muốn mình soạn **bảng phân rã mẫu** (Business Requirement → Functional Requirement → Use Case) cho một ví dụ cụ thể như *“Hoàn tiền sản phẩm”* hay *“Đặt hàng online”* để dễ hình dung hơn không?
-
 ---------------------------------------------
+# 2. Functional Requirements
 
 Functional Requirements (Yêu cầu chức năng) là **những gì hệ thống cần làm**, mô tả hành vi, chức năng hoặc dịch vụ mà hệ thống phải cung cấp để đáp ứng Business Requirements.
 
@@ -80,6 +81,8 @@ Bạn có muốn mình làm **bảng phân rã tiếp** (Business Requirement �
 
 
 ---------------------------------------------
+
+# 3. Non-functional Requirements
 
 Non-functional requirements (Yêu cầu phi chức năng) là những ràng buộc hoặc tiêu chí chất lượng mà hệ thống phải đáp ứng, không liên quan trực tiếp đến **chức năng cụ thể**, mà đến **cách hệ thống hoạt động**.
 
