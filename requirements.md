@@ -248,6 +248,433 @@ Bạn có muốn mình vẽ luôn **sơ đồ Use Case (PlantUML)** cho ví dụ
 
 ---
 
+Bạn hỏi rất đúng 🎯 – Use Case “Mua sách online” như mình viết ở trên là **một Use Case cấp cao (high-level)**, thường để giao tiếp với *Business Analyst (BA), khách hàng, và quản lý dự án*.
+
+👉 Nhưng để triển khai thành **code hoặc phân công cho dev**, Use Case này cần **phân rã thành các Use Case nhỏ hơn**, hoặc thậm chí thành *User Story/Task* trong Agile.
+
+---
+
+## 📌 Cách phân rã Use Case lớn:
+
+Ví dụ Use Case “Mua sách online” có thể tách thành:
+
+1. **Tìm kiếm & duyệt sách**
+
+   * UC1: Tìm sách theo tên
+   * UC2: Tìm sách theo tác giả
+   * UC3: Lọc sách theo thể loại
+
+2. **Quản lý giỏ hàng**
+
+   * UC4: Thêm sách vào giỏ hàng
+   * UC5: Xóa sách khỏi giỏ hàng
+   * UC6: Cập nhật số lượng sách trong giỏ
+
+3. **Thanh toán**
+
+   * UC7: Nhập thông tin giao hàng
+   * UC8: Chọn phương thức thanh toán
+   * UC9: Thực hiện thanh toán qua Payment Gateway
+
+4. **Hậu thanh toán**
+
+   * UC10: Nhận xác nhận đơn hàng
+   * UC11: Theo dõi trạng thái đơn hàng
+
+---
+
+## 📌 Liên hệ với phân công Dev:
+
+* **Frontend Dev** → UI tìm kiếm, UI giỏ hàng, UI thanh toán.
+* **Backend Dev** → API xử lý tìm kiếm, giỏ hàng, kết nối Payment Gateway.
+* **DB Dev** → Thiết kế bảng sách, giỏ hàng, đơn hàng, thanh toán.
+* **QA** → Test từng Use Case nhỏ.
+
+---
+
+✅ Kết luận:
+
+* “Mua sách online” **không quá lớn ở mức BA/thiết kế tổng thể**.
+* Nhưng khi vào **giai đoạn coding**, phải **chia nhỏ thành các Use Case chi tiết hoặc User Story** để dễ giao cho từng dev/module.
+
+---
+
+Bạn có muốn mình vẽ **Use Case Diagram phân rã từ “Mua sách online” thành các UC nhỏ hơn** để thấy rõ cấu trúc không?
+
+---
+Ok, mình sẽ vẽ **Use Case Diagram phân rã từ “Mua sách online”** thành các Use Case chi tiết hơn để bạn thấy rõ cấu trúc 🌟
+
+---
+
+## 📌 Use Case phân rã: "Mua sách online"
+
+### Các tác nhân (Actors):
+
+* **Khách hàng (User)**
+* **Payment Gateway**
+* **Hệ thống giao hàng (Logistics)**
+
+### Các nhóm Use Case chính:
+
+1. **Tìm kiếm & duyệt sách**
+
+   * Tìm sách theo tên
+   * Tìm sách theo tác giả
+   * Lọc sách theo thể loại
+
+2. **Quản lý giỏ hàng**
+
+   * Thêm sách vào giỏ hàng
+   * Xóa sách khỏi giỏ hàng
+   * Cập nhật số lượng sách
+
+3. **Thanh toán**
+
+   * Nhập thông tin giao hàng
+   * Chọn phương thức thanh toán
+   * Thanh toán (kết nối Payment Gateway)
+
+4. **Hậu thanh toán**
+
+   * Nhận xác nhận đơn hàng
+   * Theo dõi trạng thái đơn hàng (kết nối Logistics)
+
+---
+
+## 📌 PlantUML Use Case Diagram
+
+```plantuml
+@startuml
+left to right direction
+actor "Khách hàng" as User
+actor "Payment Gateway" as PG
+actor "Logistics" as LG
+
+package "Mua sách online" {
+  
+  usecase "Tìm sách theo tên" as UC1
+  usecase "Tìm sách theo tác giả" as UC2
+  usecase "Lọc sách theo thể loại" as UC3
+  
+  usecase "Thêm sách vào giỏ hàng" as UC4
+  usecase "Xóa sách khỏi giỏ hàng" as UC5
+  usecase "Cập nhật số lượng sách" as UC6
+  
+  usecase "Nhập thông tin giao hàng" as UC7
+  usecase "Chọn phương thức thanh toán" as UC8
+  usecase "Thanh toán" as UC9
+  
+  usecase "Nhận xác nhận đơn hàng" as UC10
+  usecase "Theo dõi trạng thái đơn hàng" as UC11
+}
+
+User --> UC1
+User --> UC2
+User --> UC3
+User --> UC4
+User --> UC5
+User --> UC6
+User --> UC7
+User --> UC8
+User --> UC9
+User --> UC10
+User --> UC11
+
+UC9 --> PG : "Xử lý thanh toán"
+UC11 --> LG : "Lấy thông tin giao hàng"
+
+@enduml
+```
+
+---
+
+👉 Với sơ đồ này, bạn sẽ thấy:
+
+* UC “Mua sách online” **không đứng riêng**, mà được phân rã thành **nhiều Use Case nhỏ**.
+* Mỗi UC nhỏ hoàn toàn có thể giao cho một dev hoặc nhóm dev phụ trách (Frontend, Backend, DB, QA).
+
+---
+
+Bạn có muốn mình làm thêm **bảng phân rã (UC cha → UC con → Task dev)** để tiện phân công trong team không?
+
+------------------------
+
+Rất hay 👍 để dễ phân công cho dev, ta sẽ làm bảng phân rã **Use Case cha → Use Case con → Task dev** cho ví dụ **“Mua sách online”**.
+
+---
+
+## 📌 Bảng phân rã Use Case
+
+| UC Cha (High-level)       | UC Con (Detailed)            | Task Dev (Implementation)                                                |
+| ------------------------- | ---------------------------- | ------------------------------------------------------------------------ |
+| **Tìm kiếm & duyệt sách** | Tìm sách theo tên            | - API search theo tên<br>- UI nhập từ khóa, hiển thị kết quả             |
+|                           | Tìm sách theo tác giả        | - API filter theo tác giả<br>- UI filter                                 |
+|                           | Lọc sách theo thể loại       | - API filter category<br>- Dropdown chọn thể loại                        |
+| **Quản lý giỏ hàng**      | Thêm sách vào giỏ hàng       | - API add\_to\_cart<br>- Nút "Thêm vào giỏ" trên UI                      |
+|                           | Xóa sách khỏi giỏ hàng       | - API remove\_from\_cart<br>- UI cập nhật giỏ hàng                       |
+|                           | Cập nhật số lượng sách       | - API update\_cart<br>- Input thay đổi số lượng                          |
+| **Thanh toán**            | Nhập thông tin giao hàng     | - Form nhập địa chỉ<br>- Validate dữ liệu                                |
+|                           | Chọn phương thức thanh toán  | - UI chọn COD/Online<br>- Lưu thông tin lựa chọn                         |
+|                           | Thanh toán (Payment Gateway) | - Tích hợp API VNPay/MoMo/PayPal<br>- Xử lý callback thành công/thất bại |
+| **Hậu thanh toán**        | Nhận xác nhận đơn hàng       | - API tạo đơn hàng<br>- Gửi email/notification                           |
+|                           | Theo dõi trạng thái đơn hàng | - API lấy trạng thái từ Logistics<br>- UI hiển thị tracking              |
+
+---
+
+👉 Với bảng này:
+
+* **BA** dùng để trình bày với khách hàng (clear scope).
+* **PM/Tech Lead** dùng để phân công task cho dev.
+* **Dev** biết rõ phải code API nào, UI nào.
+
+---
+
+Bạn có muốn mình tiếp tục mở rộng bảng này sang **mapping (UC → Sequence Diagram → Class → ERD)** để có chuỗi hoàn chỉnh từ requirement → design → database không?
+
+--------------------
+
+Quá chuẩn 👌. Mình sẽ minh họa chuỗi **mapping từ Requirement đến Database** cho một Use Case cụ thể trong ví dụ **“Mua sách online → Thanh toán”** để bạn thấy toàn bộ flow.
+
+---
+
+# 📌 Mapping Use Case → Sequence Diagram → Class → ERD
+
+| Level                | Mô tả                                                   | Ví dụ (Thanh toán)                                                                                                                                                                                                                                                                                                                                                             |
+| -------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Use Case (UC)**    | Diễn tả yêu cầu người dùng và tác nhân tương tác        | **UC: Thanh toán**<br>Actor: Khách hàng, Payment Gateway<br>Flow: Người dùng chọn phương thức → nhập thông tin → hệ thống gửi request → Payment Gateway xử lý → trả kết quả → hệ thống tạo đơn hàng                                                                                                                                                                            |
+| **Sequence Diagram** | Diễn tả luồng thông điệp (messages) giữa các thành phần | **Messages chính:**<br>1. User → UI: Submit order<br>2. UI → OrderController: requestThanhToan()<br>3. OrderController → PaymentService: xử lý giao dịch<br>4. PaymentService → PaymentGateway: gửi request<br>5. PaymentGateway → PaymentService: callback kết quả<br>6. PaymentService → OrderController: cập nhật trạng thái<br>7. OrderController → User: hiển thị kết quả |
+| **Class Diagram**    | Các đối tượng và quan hệ                                | **Class chính:**<br>- `Order` (orderId, totalAmount, status)<br>- `Payment` (paymentId, method, status, transactionCode)<br>- `User` (userId, name, email)<br>- `PaymentService` (processPayment(), updateStatus())                                                                                                                                                            |
+| **ERD (Database)**   | Các bảng CSDL và quan hệ                                | **Bảng tương ứng:**<br>- `Users(user_id, name, email, …)`<br>- `Orders(order_id, user_id, total_amount, status)`<br>- `Payments(payment_id, order_id, method, status, transaction_code)`<br>- Quan hệ: 1 User → nhiều Orders; 1 Order → 1 Payment                                                                                                                              |
+
+---
+
+## 📊 Nhận xét Mapping
+
+* **Use Case** → cho BA/Stakeholder hiểu "hệ thống phải làm gì".
+* **Sequence Diagram** → cho Engineer mô tả *luồng xử lý*.
+* **Class Diagram** → cho Designer/Dev định nghĩa *object & logic*.
+* **ERD** → cho DB Designer tạo bảng *lưu dữ liệu thực tế*.
+
+---
+
+👉 Với cách mapping này, mỗi bước đều **truy vết ngược (traceability)** được:
+
+* Nếu khách hàng đổi requirement → check lại UC → chỉnh lại Sequence → cập nhật Class & ERD.
+
+---
+
+Bạn có muốn mình làm **sơ đồ trực quan PlantUML** cho chuỗi này (Use Case → Sequence → Class → ERD) để thấy toàn bộ mối liên hệ không?
+
+
+--------------------
+
+Ok, mình sẽ viết bản **đặc tả Use Case (Use Case Specification)** cho **UC1: Tìm sách theo tên**. Đây là mẫu thường dùng trong BA/thiết kế hệ thống theo chuẩn UML.
+
+---
+
+# 📌 Đặc tả Use Case: UC1 – Tìm sách theo tên
+
+**1. Thông tin chung**
+
+* **Tên Use Case**: Tìm sách theo tên
+* **Mã số**: UC1
+* **Actor chính**: Khách hàng (User)
+* **Actor phụ**: Không có
+* **Mục tiêu**: Cho phép người dùng nhập từ khóa và nhận danh sách sách có tiêu đề phù hợp.
+* **Phạm vi**: Hệ thống cửa hàng sách online
+
+---
+
+**2. Mô tả ngắn gọn**
+Khách hàng nhập một từ khóa (toàn bộ hoặc một phần tên sách) vào ô tìm kiếm. Hệ thống sẽ truy vấn cơ sở dữ liệu và trả về danh sách các sách có tiêu đề chứa từ khóa.
+
+---
+
+**3. Luồng sự kiện chính (Main Flow)**
+
+1. User mở trang web/app.
+2. User nhập từ khóa vào ô tìm kiếm.
+3. User nhấn nút **Tìm kiếm**.
+4. Hệ thống nhận request từ UI.
+5. Hệ thống gửi truy vấn tìm kiếm đến DB (dùng LIKE hoặc Full-text Search).
+6. DB trả về danh sách sách phù hợp.
+7. Hệ thống hiển thị danh sách kết quả cho User.
+
+---
+
+**4. Luồng thay thế (Alternative Flows)**
+
+* **AF1 – Không tìm thấy kết quả:**
+
+  * Nếu DB không có sách nào khớp, hệ thống hiển thị thông báo “Không tìm thấy sách phù hợp”.
+* **AF2 – Lỗi kết nối DB:**
+
+  * Nếu DB không phản hồi, hệ thống hiển thị “Hệ thống bận, vui lòng thử lại sau”.
+
+---
+
+**5. Điều kiện tiên quyết (Pre-condition)**
+
+* Người dùng đã truy cập vào trang web/app.
+* Hệ thống và DB hoạt động bình thường.
+
+---
+
+**6. Điều kiện hậu (Post-condition)**
+
+* Hệ thống đã trả về danh sách kết quả tìm kiếm (có thể rỗng).
+
+---
+
+**7. Yêu cầu đặc biệt (Special Requirements)**
+
+* Tốc độ phản hồi tìm kiếm < 2 giây.
+* Hỗ trợ tìm kiếm không phân biệt hoa/thường.
+* Có gợi ý (autocomplete) khi người dùng nhập từ khóa.
+
+---
+
+👉 Đây chính là bản mô tả chi tiết để BA bàn giao cho team dev. Sau đó dev sẽ dựa vào đây mà thiết kế **Sequence Diagram + API + DB query**.
+
+---
+
+Bạn có muốn mình viết luôn **đặc tả API (REST/GraphQL)** cho UC1 này để sát với code không?
+
+
+
+--------------------
+
+
+Rồi 👍 mình sẽ lấy đúng ví dụ nhỏ **“Tìm sách theo tên” (UC1)** và mapping toàn bộ chuỗi từ **Use Case → Sequence → Class → ERD** để bạn dễ hình dung hơn.
+
+---
+
+# 📌 Mapping UC1: "Tìm sách theo tên"
+
+| Level                | Mô tả                                             | Ví dụ cụ thể (UC1: Tìm sách theo tên)                                                                                                                                                                                                                                                                                                                                                     |
+| -------------------- | ------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Use Case (UC1)**   | Người dùng muốn tìm sách theo tên để dễ dàng mua. | - **Actor**: Khách hàng (User)<br>- **Goal**: Nhập tên sách → hiển thị kết quả.<br>- **Flow**:<br>1. User nhập từ khóa.<br>2. Hệ thống tìm trong DB.<br>3. Trả về danh sách sách phù hợp.                                                                                                                                                                                                 |
+| **Sequence Diagram** | Luồng thông điệp trong tìm kiếm sách.             | 1. User → UI: nhập từ khóa.<br>2. UI → SearchController: requestSearch(keyword).<br>3. SearchController → BookService: searchByTitle(keyword).<br>4. BookService → BookRepository: queryDB(keyword).<br>5. DB → BookRepository: kết quả.<br>6. BookRepository → BookService: trả danh sách.<br>7. BookService → SearchController: danh sách.<br>8. SearchController → UI: render kết quả. |
+| **Class Diagram**    | Các đối tượng chính tham gia UC1.                 | - `Book` (bookId, title, author, price, stock)<br>- `User` (userId, name, email)<br>- `BookService` (searchByTitle())<br>- `BookRepository` (queryDB())<br>- `SearchController` (handleRequest())                                                                                                                                                                                         |
+| **ERD (Database)**   | Bảng dữ liệu để thực hiện UC1.                    | - `Books(book_id, title, author, price, stock, category_id)`<br>- `Categories(category_id, name)`<br>- Quan hệ: `Books.category_id → Categories.category_id`.                                                                                                                                                                                                                             |
+
+---
+
+## 📌 PlantUML minh họa Sequence Diagram UC1
+
+```plantuml
+@startuml
+actor User
+boundary UI
+control SearchController
+entity BookService
+database DB
+
+User -> UI : nhập từ khóa
+UI -> SearchController : requestSearch(keyword)
+SearchController -> BookService : searchByTitle(keyword)
+BookService -> DB : SELECT * FROM Books WHERE title LIKE '%keyword%'
+DB --> BookService : trả kết quả
+BookService --> SearchController : danh sách sách
+SearchController --> UI : render kết quả
+UI --> User : hiển thị danh sách
+@enduml
+```
+
+---
+
+👉 Điểm hay ở UC nhỏ như thế này:
+
+* Có thể giao **1 dev frontend** làm UI form + hiển thị,
+* **1 dev backend** làm API search,
+* **1 dev database** làm index + tối ưu query.
+
+---
+
+Bạn có muốn mình vẽ tiếp **Class Diagram + ERD bằng PlantUML** cho UC1 này không (để thấy object và bảng link nhau)?
+
+
+
+---------------------
+Ok 👍 mình viết tiếp bản **đặc tả Use Case (Use Case Specification)** cho **UC2: Tìm sách theo tác giả**.
+
+---
+
+# 📌 Đặc tả Use Case: UC2 – Tìm sách theo tác giả
+
+**1. Thông tin chung**
+
+* **Tên Use Case**: Tìm sách theo tác giả
+* **Mã số**: UC2
+* **Actor chính**: Khách hàng (User)
+* **Actor phụ**: Không có
+* **Mục tiêu**: Cho phép người dùng nhập tên tác giả và nhận danh sách các sách do tác giả đó viết.
+* **Phạm vi**: Hệ thống cửa hàng sách online
+
+---
+
+**2. Mô tả ngắn gọn**
+Người dùng nhập tên tác giả (toàn bộ hoặc một phần) vào ô tìm kiếm. Hệ thống tìm trong cơ sở dữ liệu và trả về danh sách các sách có tác giả phù hợp.
+
+---
+
+**3. Luồng sự kiện chính (Main Flow)**
+
+1. User mở trang web/app.
+2. User nhập tên tác giả vào ô tìm kiếm.
+3. User nhấn nút **Tìm kiếm**.
+4. Hệ thống nhận request từ UI.
+5. Hệ thống gửi truy vấn tìm kiếm đến DB (dựa vào cột `author` hoặc bảng `Authors`).
+6. DB trả về danh sách sách phù hợp.
+7. Hệ thống hiển thị danh sách sách kèm thông tin tác giả cho User.
+
+---
+
+**4. Luồng thay thế (Alternative Flows)**
+
+* **AF1 – Không tìm thấy tác giả hoặc sách nào:**
+
+  * Hệ thống hiển thị thông báo “Không tìm thấy sách của tác giả này”.
+* **AF2 – Lỗi nhập liệu:**
+
+  * Nếu User để trống hoặc nhập ký tự đặc biệt không hợp lệ, hệ thống yêu cầu nhập lại.
+* **AF3 – Lỗi DB:**
+
+  * Nếu DB không phản hồi, hiển thị thông báo “Hệ thống bận, vui lòng thử lại sau”.
+
+---
+
+**5. Điều kiện tiên quyết (Pre-condition)**
+
+* Người dùng đang ở trang web/app có chức năng tìm kiếm.
+* Bảng `Books` hoặc `Authors` trong DB có dữ liệu.
+
+---
+
+**6. Điều kiện hậu (Post-condition)**
+
+* Hệ thống hiển thị danh sách sách theo tác giả (có thể rỗng).
+
+---
+
+**7. Yêu cầu đặc biệt (Special Requirements)**
+
+* Hỗ trợ tìm kiếm không phân biệt hoa/thường.
+* Hỗ trợ autocomplete tên tác giả.
+* Nếu tác giả có nhiều sách, kết quả phải được phân trang (pagination).
+
+---
+
+👉 UC2 này khá giống UC1 (tìm theo tên sách), chỉ khác ở chỗ **trường dữ liệu tìm kiếm** (`title` vs `author`).
+
+---
+
+Bạn có muốn mình gộp **UC1 + UC2 + UC3 (lọc sách theo thể loại)** thành **một đặc tả tổng: "Tìm kiếm & Duyệt sách"** (Use Case cha → Use Case con) để dễ quản lý hơn không?
+
+
+-----------------------
+
+
 
 
 
