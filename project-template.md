@@ -62,15 +62,18 @@ Liệt kê 5–10 yêu cầu chức năng chính.
 | NFR-02 | Security     | Dữ liệu người dùng được mã hóa |
 | NFR-03 | Availability | Hệ thống hoạt động 24/7        |
 
-* **2.4. Các tác nhân (Actors)** và mô tả vai trò
-
 ---
 
 ### **3. Mô hình hóa hệ thống (System Modeling)**
 
 > Mỗi sinh viên hoặc nhóm nhỏ (1–2 người) chọn **1 chức năng chính** để mô hình hóa đầy đủ.
 
-#### **3.1. Biểu đồ Use Case tổng thể (Use Case Diagram)**
+#### **3.1. Biểu đồ hoạt động / BPMN (Activity Diagram / BPMN Diagram)**
+
+* Mô hình hóa quy trình nghiệp vụ chính (ví dụ: Đặt hàng, Thanh toán, Vận chuyển, Xử lý hoàn trả...).
+* Có các bước (activity), điều kiện (decision), và tác nhân tham gia.
+
+#### **3.2. Biểu đồ Use Case tổng thể (Use Case Diagram)**
 
 * Vẽ sơ đồ Use Case tổng thể hệ thống.
 * Mỗi sinh viên chọn 1 Use Case chi tiết để đặc tả đầy đủ.
@@ -82,7 +85,7 @@ Use Case: “Place Order”
 * Includes: “Validate Cart”, “Process Payment”
 * Extends: “Cancel Order”
 
-### 3.2 Đặc tả Use Case (Use case Specification)
+### 3.3 Đặc tả Use Case (Use case Specification)
 
 Mỗi sinh viên viết đặc tả chi tiết cho 1 Use Case:
 
@@ -97,17 +100,14 @@ Mỗi sinh viên viết đặc tả chi tiết cho 1 Use Case:
 | Alternate Flow  |          |
 | Exception Flow  |          |
 
-#### **3.2. Biểu đồ hoạt động / BPMN (Activity Diagram / BPMN Diagram)**
 
-* Mô hình hóa quy trình nghiệp vụ chính (ví dụ: Đặt hàng, Thanh toán, Vận chuyển, Xử lý hoàn trả...).
-* Có các bước (activity), điều kiện (decision), và tác nhân tham gia.
 
-#### **3.3. Biểu đồ lớp (Class Diagram)**
+#### **3.4. Biểu đồ lớp (Class Diagram)**
 
 * Xác định các lớp (entities, controllers, services, models).
 * Biểu diễn quan hệ giữa các lớp: Association, Aggregation, Composition, Inheritance.
 
-#### **3.4. Biểu đồ trình tự (Sequence Diagram)**
+#### **3.5. Biểu đồ trình tự (Sequence Diagram)**
 
 * Vẽ sơ đồ tuần tự thể hiện luồng tương tác giữa các đối tượng khi thực hiện 1 Use Case cụ thể.
 
@@ -131,7 +131,7 @@ Mỗi sinh viên viết đặc tả chi tiết cho 1 Use Case:
 | **Microkernel (Plugin-based)** | Lõi hệ thống mở rộng qua plugin.                               | Odoo E-commerce, Magento                       |
 | **Cloud-based / SaaS**         | Ứng dụng triển khai trên đám mây.                              | Shopify Cloud, Salesforce Commerce Cloud       |
 
-### 6.3 Sơ đồ kiến trúc mẫu (Architecture Diagram Examples)
+### Sơ đồ kiến trúc mẫu (Architecture Diagram Examples)
 
 #### (a) Layered Architecture
 
@@ -272,20 +272,19 @@ rectangle "Plugins" {
 | Nộp tại         | LMS / Google Drive / Email giảng viên |
 
 
-
-Dưới đây là **các gợi ý Mục tiêu nghiên cứu (Research Objectives)** cho chủ đề **“Hệ thống Thương mại điện tử (E-commerce System)”**, được chia theo **3 mức độ**: cơ bản – ứng dụng – nâng cao, phù hợp với sinh viên làm **đồ án hoặc nghiên cứu khoa học** 👇
-
 ---
 
-## 🎯 **I. Mục tiêu tổng quát (General Objective)**
+## Mục tiêu nghiên cứu (Research Objectives)** cho chủ đề **“Hệ thống Thương mại điện tử (E-commerce System)”**
+
+### 🎯 **I. Mục tiêu tổng quát (General Objective)**
 
 > Nghiên cứu, phân tích và thiết kế một hệ thống Thương mại điện tử nhằm hỗ trợ hoạt động giao dịch, mua bán hàng hóa/dịch vụ trên nền tảng trực tuyến, đáp ứng yêu cầu thực tiễn và đảm bảo khả năng mở rộng, bảo mật, và trải nghiệm người dùng.
 
 ---
 
-## 🎯 **II. Mục tiêu cụ thể (Specific Objectives)**
+### 🎯 **II. Mục tiêu cụ thể (Specific Objectives)**
 
-### **1. Mức độ cơ bản (Basic Level)**
+#### **1. Mức độ cơ bản (Basic Level)**
 
 Dành cho đồ án thiên về **phân tích & thiết kế hệ thống**
 
@@ -297,7 +296,7 @@ Dành cho đồ án thiên về **phân tích & thiết kế hệ thống**
 
 ---
 
-### **2. Mức độ ứng dụng (Applied Level)**
+#### **2. Mức độ ứng dụng (Applied Level)**
 
 Dành cho đồ án có yếu tố **phát triển và thử nghiệm sản phẩm mẫu (prototype)**
 
@@ -309,7 +308,7 @@ Dành cho đồ án có yếu tố **phát triển và thử nghiệm sản ph�
 
 ---
 
-### **3. Mức độ nâng cao (Advanced / Research Level)**
+#### **3. Mức độ nâng cao (Advanced / Research Level)**
 
 Dành cho đề tài có yếu tố **nghiên cứu – đổi mới sáng tạo**
 
@@ -321,7 +320,7 @@ Dành cho đề tài có yếu tố **nghiên cứu – đổi mới sáng tạo
 
 ---
 
-## 📘 **Ví dụ Mục tiêu nghiên cứu (Samples)**
+#### 📘 **Ví dụ Mục tiêu nghiên cứu (Samples)**
 
 | STT | Chủ đề nghiên cứu                                    | Mục tiêu cụ thể                                                                                                |
 | --- | ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
