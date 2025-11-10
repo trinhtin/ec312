@@ -39,9 +39,9 @@
 
 ### **2. Phân tích yêu cầu (Requirement Analysis)**
 
-* **2.1. Mô tả bài toán (Problem Statement)**
+**2.1. Mô tả bài toán (Problem Statement)**
   
-* **2.2. Các yêu cầu chức năng (Functional Requirements)**
+**2.2. Các yêu cầu chức năng (Functional Requirements)**
 Liệt kê 5–10 yêu cầu chức năng chính.
 *(List 5–10 main functional requirements.)*
 
@@ -53,7 +53,7 @@ Liệt kê 5–10 yêu cầu chức năng chính.
 | FR-04 | Payment Processing        | Xử lý thanh toán                         |
 | FR-05 | Customer Review           | Người dùng đánh giá sản phẩm             |
 
-* **2.3. Các yêu cầu phi chức năng (Non-functional Requirements)**
+**2.3. Các yêu cầu phi chức năng (Non-functional Requirements)**
   
 | ID     | Requirement  | Mô tả                          |
 | ------ | ------------ | ------------------------------ |
