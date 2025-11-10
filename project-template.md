@@ -1,9 +1,5 @@
 ## 🎓 **ĐỒ ÁN MÔN HỌC: THIẾT KẾ HỆ THỐNG THƯƠNG MẠI ĐIỆN TỬ**
 
-**Trường Đại học Công nghệ Thông tin – Khoa Hệ thống Thông tin**
-
----
-
 ### **Trang bìa (Cover Page)**
 
 * Tên môn học: *Thiết kế hệ thống Thương mại điện tử*
