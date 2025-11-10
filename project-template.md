@@ -431,7 +431,7 @@ Dưới đây là **bản template hoàn chỉnh**, có thể dùng làm chuẩn
 
 ---
 
-### **1. Trang bìa (Cover Page)**
+### **Trang bìa (Cover Page)**
 
 * Tên môn học: *Thiết kế hệ thống Thương mại điện tử*
 * Tên đề tài: *Ví dụ: Thiết kế hệ thống B2C bán mỹ phẩm trực tuyến*
@@ -441,13 +441,7 @@ Dưới đây là **bản template hoàn chỉnh**, có thể dùng làm chuẩn
 
 ---
 
-### **2. Tóm tắt (Abstract)**
-
-Giới thiệu ngắn gọn về đề tài, vấn đề cần giải quyết, mục tiêu, phương pháp phân tích – thiết kế, và kết quả đạt được (100–200 từ).
-
----
-
-### **3. Giới thiệu (Introduction)**
+### **1. Giới thiệu (Introduction)**
 
 * **Bối cảnh và lý do chọn đề tài**
 * **Mục tiêu nghiên cứu / thiết kế**
@@ -457,91 +451,128 @@ Giới thiệu ngắn gọn về đề tài, vấn đề cần giải quyết, m
 
 ---
 
-### **4. Cơ sở lý thuyết (Literature Review / Theoretical Background)**
+### **2. Phân tích yêu cầu (Requirement Analysis)**
 
-* Khái niệm cơ bản về hệ thống Thương mại điện tử
-* Các mô hình hệ thống TMĐT phổ biến (B2C, C2C, B2B, O2O, v.v.)
-* Kiến thức liên quan: UML, BPMN, Database, Kiến trúc hệ thống, Thiết kế giao diện người dùng
-* Tham khảo từ các hệ thống có thật (Shopee, Shopify, Odoo, Tiki, Amazon, v.v.)
+* **2.1. Mô tả bài toán (Problem Statement)**
+* **2.2. Các yêu cầu chức năng (Functional Requirements)**
+Liệt kê 5–10 yêu cầu chức năng chính.
+*(List 5–10 main functional requirements.)*
+
+| ID    | Requirement               | Mô tả (Description)                      |
+| ----- | ------------------------- | ---------------------------------------- |
+| FR-01 | User Registration & Login | Cho phép người dùng đăng ký và đăng nhập |
+| FR-02 | Product Management        | Quản lý sản phẩm                         |
+| FR-03 | Order Management          | Quản lý đơn hàng                         |
+| FR-04 | Payment Processing        | Xử lý thanh toán                         |
+| FR-05 | Customer Review           | Người dùng đánh giá sản phẩm             |
+
+* **2.3. Các yêu cầu phi chức năng (Non-functional Requirements)**
+| ID     | Requirement  | Mô tả                          |
+| ------ | ------------ | ------------------------------ |
+| NFR-01 | Performance  | Thời gian phản hồi dưới 3 giây |
+| NFR-02 | Security     | Dữ liệu người dùng được mã hóa |
+| NFR-03 | Availability | Hệ thống hoạt động 24/7        |
+
+* **2.4. Các tác nhân (Actors)** và mô tả vai trò
 
 ---
 
-### **5. Phân tích yêu cầu (Requirement Analysis)**
-
-* **5.1. Mô tả bài toán (Problem Statement)**
-* **5.2. Các yêu cầu chức năng (Functional Requirements)**
-* **5.3. Các yêu cầu phi chức năng (Non-functional Requirements)**
-* **5.4. Các tác nhân (Actors)** và mô tả vai trò
-
----
-
-### **6. Mô hình hóa hệ thống (System Modeling)**
+### **3. Mô hình hóa hệ thống (System Modeling)**
 
 > Mỗi sinh viên hoặc nhóm nhỏ (1–2 người) chọn **1 chức năng chính** để mô hình hóa đầy đủ.
 
-#### **6.1. Biểu đồ Use Case tổng thể**
+#### **3.1. Biểu đồ Use Case tổng thể (Use Case Diagram)**
 
-* Use Case Diagram cho toàn hệ thống
-* Mô tả chi tiết các Use Case chính (Use Case Specification)
+* Vẽ sơ đồ Use Case tổng thể hệ thống.
+* Mỗi sinh viên chọn 1 Use Case chi tiết để đặc tả đầy đủ.
 
-#### **6.2. Biểu đồ hoạt động / BPMN**
+**Ví dụ:**
+Use Case: “Place Order”
 
-* Mô hình hóa quy trình nghiệp vụ chính (Activity Diagram hoặc BPMN)
+* Actors: Customer, System, Payment Gateway
+* Includes: “Validate Cart”, “Process Payment”
+* Extends: “Cancel Order”
 
-#### **6.3. Biểu đồ lớp (Class Diagram)**
+### 3.2 Đặc tả Use Case (Use case Specification)
 
-* Xác định các lớp đối tượng chính
-* Thuộc tính, phương thức, và mối quan hệ (association, inheritance, aggregation)
+Mỗi sinh viên viết đặc tả chi tiết cho 1 Use Case:
 
-#### **6.4. Biểu đồ trình tự (Sequence Diagram)**
+| Mục             | Nội dung |
+| --------------- | -------- |
+| Use Case ID     | FR-XX    |
+| Use Case Name   |          |
+| Actors          |          |
+| Pre-conditions  |          |
+| Post-conditions |          |
+| Main Flow       |          |
+| Alternate Flow  |          |
+| Exception Flow  |          |
 
-* Mô tả tương tác giữa các đối tượng khi thực hiện một Use Case
+#### **3.2. Biểu đồ hoạt động / BPMN (Activity Diagram / BPMN Diagram)**
+
+* Mô hình hóa quy trình nghiệp vụ chính (ví dụ: Đặt hàng, Thanh toán, Vận chuyển, Xử lý hoàn trả...).
+* Có các bước (activity), điều kiện (decision), và tác nhân tham gia.
+
+#### **3.3. Biểu đồ lớp (Class Diagram)**
+
+* Xác định các lớp (entities, controllers, services, models).
+* Biểu diễn quan hệ giữa các lớp: Association, Aggregation, Composition, Inheritance.
+
+#### **3.4. Biểu đồ trình tự (Sequence Diagram)**
+
+* Vẽ sơ đồ tuần tự thể hiện luồng tương tác giữa các đối tượng khi thực hiện 1 Use Case cụ thể.
 
 ---
 
-### **7. Thiết kế hệ thống (System Design)**
+### **4. Thiết kế hệ thống (System Design)**
 
-#### **7.1. Kiến trúc hệ thống (System Architecture)**
+#### **4.1. Kiến trúc hệ thống (System Architecture)**
 
 * Mô tả mô hình kiến trúc (Layered, Tiered, hoặc Microservices)
 * Sơ đồ kiến trúc tổng thể (PlantUML / Draw.io / Lucidchart, v.v.)
 * Mô tả các thành phần chính (Frontend, Backend, Database, API, Payment Gateway, v.v.)
 
-#### **7.2. Thiết kế cơ sở dữ liệu (Database Design)**
+#### **4.2. Thiết kế cơ sở dữ liệu (Database Design)**
 
-* Mô hình ERD
-* Chuyển đổi sang mô hình vật lý (Database Schema)
+* Mô hình ERD (Entity Relationship Diagram).
+* Thiết kế bảng, khóa chính – khóa ngoại, và mối quan hệ.
 
-#### **7.3. Thiết kế giao diện người dùng (UI Design)**
+**Ví dụ:**
 
-* Phác thảo (Mockup) các trang chính
+| Table  | Fields                                   | Description              |
+| ------ | ---------------------------------------- | ------------------------ |
+| Users  | user_id (PK), name, email, password      | Lưu thông tin người dùng |
+| Orders | order_id (PK), user_id (FK), date, total | Thông tin đơn hàng       |
+
+
+#### **4.3. Thiết kế giao diện, trải nghiệm người dùng (UI/UX Design)**
+
+* Thiết kế các giao diện chính (Home, Product Detail, Cart, Checkout, Admin Dashboard…).
 * Logic điều hướng và trải nghiệm người dùng
+* Có thể dùng Figma / Canva / PowerPoint / HTML mockup.
 
 ---
 
-### **8. Cài đặt và Demo (Implementation & Demo)**
+### **5. Cài đặt và Demo (Implementation & Demo)**
 
+* Nếu có thể, nhóm xây dựng bản demo (prototype hoặc web nhỏ).
+* Có thể dùng: Laravel, Django, Node.js, React, Flutter, hoặc No-code tool (Wix, Shopify).
+* Demo tập trung vào **1 chức năng chính (Use Case)** mà sinh viên chọn
+  
 * Công nghệ sử dụng (HTML/CSS, Laravel, NodeJS, MySQL, Figma, v.v.)
 * Một số màn hình demo chính hoặc mô phỏng chức năng
 
----
-
-### **9. Kết quả và đánh giá (Results & Evaluation)**
-
-* Kết quả đạt được (so với yêu cầu ban đầu)
-* Đánh giá hiệu quả và tính khả thi
-* Hạn chế hiện tại của hệ thống
 
 ---
 
-### **10. Kết luận và hướng phát triển (Conclusion & Future Work)**
+### **6. Kết luận và hướng phát triển (Conclusion & Future Work)**
 
-* Tóm tắt nội dung chính của đồ án
+* Kết quả đạt được (Tóm tắt những gì đã hoàn thành so với yêu cầu ban đầu)
 * Đề xuất hướng phát triển hoặc mở rộng (ví dụ: tích hợp AI chatbot, cá nhân hóa sản phẩm, v.v.)
 
 ---
 
-### **11. Tài liệu tham khảo (References)**
+### **7. Tài liệu tham khảo (References)**
 
 * Sách, bài báo, website, tài liệu UML, hoặc hệ thống tham khảo.
 * Ví dụ:
@@ -554,7 +585,7 @@ Giới thiệu ngắn gọn về đề tài, vấn đề cần giải quyết, m
 
 ---
 
-### **12. Phụ lục (Appendix)**
+### **Phụ lục (Appendix)**
 
 * Biểu đồ đầy đủ (PlantUML code, ERD, Mockup UI, hoặc API list).
 * Nhật ký làm việc nhóm.
