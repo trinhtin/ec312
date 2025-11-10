@@ -29,8 +29,7 @@
 
 ### **1. Giới thiệu (Introduction)**
 
-* **Lý do chọn đề tài**
-  Mô tả ngắn gọn ý tưởng và phạm vi hệ thống TMĐT mà nhóm chọn, mục tiêu kinh doanh, giá trị mang lại, và đối tượng người dùng.
+* **Lý do chọn đề tài**: Mô tả ngắn gọn ý tưởng mà nhóm chọn, mục tiêu kinh doanh, giá trị mang lại, và đối tượng người dùng.
 *(Describe the overall system, business goals, value proposition, and user audience.)*
 * **Mục tiêu nghiên cứu**  
 * **Phạm vi hệ thống**
