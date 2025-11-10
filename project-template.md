@@ -476,67 +476,6 @@ Mô tả tổng quan hệ thống, mục tiêu kinh doanh, giá trị mang lại
 
 * **Bối cảnh và lý do chọn đề tài**
 * **Mục tiêu nghiên cứu**
-Dưới đây là **các gợi ý Mục tiêu nghiên cứu (Research Objectives)** cho chủ đề **“Hệ thống Thương mại điện tử (E-commerce System)”**, được chia theo **3 mức độ**: cơ bản – ứng dụng – nâng cao, phù hợp với sinh viên làm **đồ án hoặc nghiên cứu khoa học** 👇
-
----
-
-## 🎯 **I. Mục tiêu tổng quát (General Objective)**
-
-> Nghiên cứu, phân tích và thiết kế một hệ thống Thương mại điện tử nhằm hỗ trợ hoạt động giao dịch, mua bán hàng hóa/dịch vụ trên nền tảng trực tuyến, đáp ứng yêu cầu thực tiễn và đảm bảo khả năng mở rộng, bảo mật, và trải nghiệm người dùng.
-
----
-
-## 🎯 **II. Mục tiêu cụ thể (Specific Objectives)**
-
-### **1. Mức độ cơ bản (Basic Level)**
-
-Dành cho đồ án thiên về **phân tích & thiết kế hệ thống**
-
-* Phân tích yêu cầu người dùng và xác định các chức năng chính của hệ thống TMĐT.
-* Thiết kế các mô hình **Use Case, Class, Sequence, Activity Diagram** để mô tả logic nghiệp vụ.
-* Thiết kế cơ sở dữ liệu quan hệ (ERD) hỗ trợ các nghiệp vụ mua bán trực tuyến.
-* Xây dựng giao diện người dùng (UI) thân thiện, phù hợp với trải nghiệm khách hàng (UX).
-* Trình bày kiến trúc hệ thống (System Architecture) theo hướng **Layered hoặc Tiered**.
-
----
-
-### **2. Mức độ ứng dụng (Applied Level)**
-
-Dành cho đồ án có yếu tố **phát triển và thử nghiệm sản phẩm mẫu (prototype)**
-
-* Phát triển mô hình mẫu hệ thống TMĐT (Web hoặc Mobile) sử dụng ngôn ngữ lập trình hiện đại (VD: Laravel, Node.js, React, Flutter...).
-* Ứng dụng **kiến trúc Microservices hoặc Microkernel** để tăng khả năng mở rộng hệ thống.
-* Tích hợp **cổng thanh toán trực tuyến (Online Payment Gateway)** và **chức năng quản lý đơn hàng (Order Management)**.
-* Kiểm thử chức năng và đánh giá hiệu năng cơ bản của hệ thống.
-* Đề xuất hướng cải tiến nhằm nâng cao trải nghiệm người dùng hoặc tối ưu quy trình bán hàng.
-
----
-
-### **3. Mức độ nâng cao (Advanced / Research Level)**
-
-Dành cho đề tài có yếu tố **nghiên cứu – đổi mới sáng tạo**
-
-* Nghiên cứu ứng dụng **AI/ML trong cá nhân hóa trải nghiệm khách hàng** (gợi ý sản phẩm, chatbot tư vấn, dự báo nhu cầu...).
-* Xây dựng **kiến trúc Cloud-based hoặc SaaS** cho hệ thống TMĐT đa người dùng.
-* Tích hợp **RPA (Robotic Process Automation)** để tự động hóa các quy trình nghiệp vụ (xử lý đơn, gửi email, cập nhật tồn kho...).
-* Phân tích và đánh giá **hiệu năng, bảo mật, và khả năng mở rộng** của các mô hình kiến trúc (Monolithic vs Microservices).
-* Đề xuất mô hình **E-commerce 4.0** ứng dụng **Blockchain, IoT hoặc Knowledge Graph**.
-
----
-
-## 📘 **Ví dụ Mục tiêu nghiên cứu (Samples)**
-
-| STT | Chủ đề nghiên cứu                                    | Mục tiêu cụ thể                                                                                                |
-| --- | ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| 1   | Hệ thống bán hàng trực tuyến cho cửa hàng thời trang | Phân tích và thiết kế hệ thống TMĐT hỗ trợ quản lý sản phẩm, giỏ hàng, thanh toán và quản trị đơn hàng.        |
-| 2   | Ứng dụng Chatbot AI trong TMĐT                       | Xây dựng chatbot hỗ trợ khách hàng tự động trả lời câu hỏi và gợi ý sản phẩm dựa trên lịch sử mua hàng.        |
-| 3   | Hệ thống TMĐT dựa trên kiến trúc Microservices       | Đề xuất và triển khai mô hình kiến trúc Microservices nhằm cải thiện hiệu năng và khả năng mở rộng hệ thống.   |
-| 4   | Nền tảng TMĐT SaaS cho nhiều nhà bán hàng            | Nghiên cứu và xây dựng nền tảng SaaS cho phép nhiều cửa hàng đăng ký và vận hành độc lập.                      |
-| 5   | Phân tích hành vi người dùng trong TMĐT              | Ứng dụng học máy để phân tích dữ liệu hành vi mua sắm, nhằm cá nhân hóa nội dung hiển thị cho từng khách hàng. |
-
----
-
-Bạn có muốn mình tạo **file `.docx`** mẫu “Mục tiêu nghiên cứu cho Hệ thống TMĐT” (song ngữ Việt–Anh, trình bày theo chuẩn đề tài nghiên cứu khoa học) để sinh viên có thể chọn dùng trực tiếp không?
 
   
 * **Phạm vi hệ thống (Scope)**
@@ -624,6 +563,77 @@ Mỗi sinh viên viết đặc tả chi tiết cho 1 Use Case:
 * Mô tả mô hình kiến trúc (Layered, Tiered, hoặc Microservices)
 * Sơ đồ kiến trúc tổng thể (PlantUML / Draw.io / Lucidchart, v.v.)
 * Mô tả các thành phần chính (Frontend, Backend, Database, API, Payment Gateway, v.v.)
+*(Present the overall architecture design that supports scalability, modularity, and maintainability.)*
+
+| Kiến trúc                      | Mô tả (Description)                                            | Ví dụ trong TMĐT                               |
+| ------------------------------ | -------------------------------------------------------------- | ---------------------------------------------- |
+| **Monolithic**                 | Tất cả chức năng gói trong một ứng dụng duy nhất.              | Website TMĐT nhỏ (PHP, Laravel, WordPress)     |
+| **Layered Architecture**       | Phân tầng Presentation – Business – Data.                      | Shopee Web App (Frontend + Service Layer + DB) |
+| **Tiered Architecture**        | Tách tầng theo triển khai vật lý (Client / Server / Database). | Hệ thống đặt hàng web + API server + DB        |
+| **Microservices**              | Mỗi dịch vụ độc lập, giao tiếp qua API.                        | Shopify, Amazon, Tiki                          |
+| **Microkernel (Plugin-based)** | Lõi hệ thống mở rộng qua plugin.                               | Odoo E-commerce, Magento                       |
+| **Cloud-based / SaaS**         | Ứng dụng triển khai trên đám mây.                              | Shopify Cloud, Salesforce Commerce Cloud       |
+
+### 6.3 Sơ đồ kiến trúc mẫu (Architecture Diagram Examples)
+
+#### (a) Layered Architecture
+
+```plantuml
+@startuml
+title Layered Architecture for E-commerce
+rectangle "Presentation Layer" {
+  [Web UI] --> [Business Layer]
+}
+rectangle "Business Layer" {
+  [Order Service] --> [Data Access Layer]
+  [Payment Service] --> [Data Access Layer]
+}
+rectangle "Data Access Layer" {
+  [Database]
+}
+@enduml
+```
+
+#### (b) Tiered Architecture
+
+```plantuml
+@startuml
+title 3-Tier E-commerce Architecture
+actor User
+rectangle "Client Tier" {
+  [Browser / Mobile App]
+}
+rectangle "Application Tier" {
+  [E-commerce Server]
+}
+rectangle "Data Tier" {
+  [Database Server]
+}
+User --> [Browser / Mobile App]
+[Browser / Mobile App] --> [E-commerce Server]
+[E-commerce Server] --> [Database Server]
+@enduml
+```
+
+#### (c) Microkernel (Plugin-based)
+
+```plantuml
+@startuml
+title Microkernel Architecture (Plugin-based)
+rectangle "Core System" {
+  [Order Core] 
+  [Inventory Core]
+}
+rectangle "Plugins" {
+  [Payment Plugin] 
+  [Shipping Plugin]
+  [Promotion Plugin]
+}
+[Payment Plugin] --> [Order Core]
+[Shipping Plugin] --> [Inventory Core]
+[Promotion Plugin] --> [Order Core]
+@enduml
+```
 
 #### **4.2. Thiết kế cơ sở dữ liệu (Database Design)**
 
@@ -646,11 +656,11 @@ Mỗi sinh viên viết đặc tả chi tiết cho 1 Use Case:
 
 ---
 
-### **5. Cài đặt và Demo (Implementation & Demo)**
+### **5. Demo & Báo cáo (Demo & Reporting)**
 
-* Nếu có thể, nhóm xây dựng bản demo (prototype hoặc web nhỏ).
-* Có thể dùng: Laravel, Django, Node.js, React, Flutter, hoặc No-code tool (Wix, Shopify).
-* Demo tập trung vào **1 chức năng chính (Use Case)** mà sinh viên chọn
+* Demo (prototype hoặc web nhỏ) tập trung vào **các chức năng chính (Use Case)** mà sinh viên chọn.  
+* Có thể dùng: Laravel, Django, Node.js, React, Flutter, hoặc No-code tool (Wix, Shopify, WooCommerce).
+
   
 * Công nghệ sử dụng (HTML/CSS, Laravel, NodeJS, MySQL, Figma, v.v.)
 * Một số màn hình demo chính hoặc mô phỏng chức năng
@@ -694,5 +704,72 @@ Mỗi sinh viên viết đặc tả chi tiết cho 1 Use Case:
 
 ---
 
-Nếu bạn muốn, mình có thể tạo luôn **file .docx template chuẩn (có sẵn header, numbering, style)** để bạn phát cho sinh viên làm theo.
-👉 Bạn có muốn mình tạo file đó không?
+### ✅ **Yêu cầu nộp bài (Submission Requirements)**
+
+| Mục             | Yêu cầu                               |
+| --------------- | ------------------------------------- |
+| File báo cáo    | .docx hoặc .pdf                       |
+| File thiết kế   | .puml, .png hoặc .jpg                 |
+| Demo (tùy chọn) | Video hoặc Link chạy thử              |
+| Deadline        |                                       |
+| Nộp tại         | LMS / Google Drive / Email giảng viên |
+
+
+
+Dưới đây là **các gợi ý Mục tiêu nghiên cứu (Research Objectives)** cho chủ đề **“Hệ thống Thương mại điện tử (E-commerce System)”**, được chia theo **3 mức độ**: cơ bản – ứng dụng – nâng cao, phù hợp với sinh viên làm **đồ án hoặc nghiên cứu khoa học** 👇
+
+---
+
+## 🎯 **I. Mục tiêu tổng quát (General Objective)**
+
+> Nghiên cứu, phân tích và thiết kế một hệ thống Thương mại điện tử nhằm hỗ trợ hoạt động giao dịch, mua bán hàng hóa/dịch vụ trên nền tảng trực tuyến, đáp ứng yêu cầu thực tiễn và đảm bảo khả năng mở rộng, bảo mật, và trải nghiệm người dùng.
+
+---
+
+## 🎯 **II. Mục tiêu cụ thể (Specific Objectives)**
+
+### **1. Mức độ cơ bản (Basic Level)**
+
+Dành cho đồ án thiên về **phân tích & thiết kế hệ thống**
+
+* Phân tích yêu cầu người dùng và xác định các chức năng chính của hệ thống TMĐT.
+* Thiết kế các mô hình **Use Case, Class, Sequence, Activity Diagram** để mô tả logic nghiệp vụ.
+* Thiết kế cơ sở dữ liệu quan hệ (ERD) hỗ trợ các nghiệp vụ mua bán trực tuyến.
+* Xây dựng giao diện người dùng (UI) thân thiện, phù hợp với trải nghiệm khách hàng (UX).
+* Trình bày kiến trúc hệ thống (System Architecture) theo hướng **Layered hoặc Tiered**.
+
+---
+
+### **2. Mức độ ứng dụng (Applied Level)**
+
+Dành cho đồ án có yếu tố **phát triển và thử nghiệm sản phẩm mẫu (prototype)**
+
+* Phát triển mô hình mẫu hệ thống TMĐT (Web hoặc Mobile) sử dụng ngôn ngữ lập trình hiện đại (VD: Laravel, Node.js, React, Flutter...).
+* Ứng dụng **kiến trúc Microservices hoặc Microkernel** để tăng khả năng mở rộng hệ thống.
+* Tích hợp **cổng thanh toán trực tuyến (Online Payment Gateway)** và **chức năng quản lý đơn hàng (Order Management)**.
+* Kiểm thử chức năng và đánh giá hiệu năng cơ bản của hệ thống.
+* Đề xuất hướng cải tiến nhằm nâng cao trải nghiệm người dùng hoặc tối ưu quy trình bán hàng.
+
+---
+
+### **3. Mức độ nâng cao (Advanced / Research Level)**
+
+Dành cho đề tài có yếu tố **nghiên cứu – đổi mới sáng tạo**
+
+* Nghiên cứu ứng dụng **AI/ML trong cá nhân hóa trải nghiệm khách hàng** (gợi ý sản phẩm, chatbot tư vấn, dự báo nhu cầu...).
+* Xây dựng **kiến trúc Cloud-based hoặc SaaS** cho hệ thống TMĐT đa người dùng.
+* Tích hợp **RPA (Robotic Process Automation)** để tự động hóa các quy trình nghiệp vụ (xử lý đơn, gửi email, cập nhật tồn kho...).
+* Phân tích và đánh giá **hiệu năng, bảo mật, và khả năng mở rộng** của các mô hình kiến trúc (Monolithic vs Microservices).
+* Đề xuất mô hình **E-commerce 4.0** ứng dụng **Blockchain, IoT hoặc Knowledge Graph**.
+
+---
+
+## 📘 **Ví dụ Mục tiêu nghiên cứu (Samples)**
+
+| STT | Chủ đề nghiên cứu                                    | Mục tiêu cụ thể                                                                                                |
+| --- | ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| 1   | Hệ thống bán hàng trực tuyến cho cửa hàng thời trang | Phân tích và thiết kế hệ thống TMĐT hỗ trợ quản lý sản phẩm, giỏ hàng, thanh toán và quản trị đơn hàng.        |
+| 2   | Ứng dụng Chatbot AI trong TMĐT                       | Xây dựng chatbot hỗ trợ khách hàng tự động trả lời câu hỏi và gợi ý sản phẩm dựa trên lịch sử mua hàng.        |
+| 3   | Hệ thống TMĐT dựa trên kiến trúc Microservices       | Đề xuất và triển khai mô hình kiến trúc Microservices nhằm cải thiện hiệu năng và khả năng mở rộng hệ thống.   |
+| 4   | Nền tảng TMĐT SaaS cho nhiều nhà bán hàng            | Nghiên cứu và xây dựng nền tảng SaaS cho phép nhiều cửa hàng đăng ký và vận hành độc lập.                      |
+| 5   | Phân tích hành vi người dùng trong TMĐT              | Ứng dụng học máy để phân tích dữ liệu hành vi mua sắm, nhằm cá nhân hóa nội dung hiển thị cho từng khách hàng. |
