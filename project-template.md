@@ -1,5 +1,7 @@
 ## 🎓 **ĐỒ ÁN MÔN HỌC: THIẾT KẾ HỆ THỐNG THƯƠNG MẠI ĐIỆN TỬ**
 
+---
+
 ### **Trang bìa (Cover Page)**
 
 * Tên môn học: *Thiết kế hệ thống Thương mại điện tử*
@@ -27,27 +29,11 @@
 
 ### **1. Giới thiệu (Introduction)**
 
-**Mục tiêu:** Mô tả ngắn gọn ý tưởng và phạm vi hệ thống TMĐT mà nhóm chọn.
-*(Briefly describe the business idea and scope of your e-commerce system.)*
-
-**Gợi ý:**
-
-* Hệ thống B2C bán sản phẩm tiêu dùng / Hệ thống dịch vụ vận chuyển / Nền tảng booking / Ứng dụng TMĐT di động...
-* Xác định khách hàng mục tiêu, giá trị mang lại.
-  
-
-*(System introduction and business purpose)*
-
-Mô tả tổng quan hệ thống, mục tiêu kinh doanh, giá trị mang lại, và đối tượng người dùng.
+* **Lý do chọn đề tài**
+  Mô tả ngắn gọn ý tưởng và phạm vi hệ thống TMĐT mà nhóm chọn, mục tiêu kinh doanh, giá trị mang lại, và đối tượng người dùng.
 *(Describe the overall system, business goals, value proposition, and user audience.)*
-
-
-
-* **Bối cảnh và lý do chọn đề tài**
-* **Mục tiêu nghiên cứu**
-
-  
-* **Phạm vi hệ thống (Scope)**
+* **Mục tiêu nghiên cứu**  
+* **Phạm vi hệ thống**
 * **Cấu trúc báo cáo**
 
 ---
