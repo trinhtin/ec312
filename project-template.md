@@ -441,12 +441,105 @@ Dưới đây là **bản template hoàn chỉnh**, có thể dùng làm chuẩn
 
 ---
 
+### Thông tin nhóm (Team Information)
+
+| Thành viên | MSSV | Vai trò (Role)            | Ghi chú |
+| ---------- | ---- | ------------------------- | ------- |
+| 1.         |      | Nhóm trưởng (Team Leader) |         |
+| 2.         |      | Thành viên (Member)       |         |
+| 3.         |      | Thành viên (Member)       |         |
+| 4.         |      | Thành viên (Member)       |         |
+| 5.         |      | Thành viên (Member)       |         |
+| 6.         |      | Thành viên (Member)       |         |
+
+> *Nhóm tối đa 6 sinh viên. Mỗi sinh viên chọn 1 Requirement cụ thể để thực hiện phân tích & thiết kế chi tiết.*
+> 
+---
+
 ### **1. Giới thiệu (Introduction)**
 
+**Mục tiêu:** Mô tả ngắn gọn ý tưởng và phạm vi hệ thống TMĐT mà nhóm chọn.
+*(Briefly describe the business idea and scope of your e-commerce system.)*
+
+**Gợi ý:**
+
+* Hệ thống B2C bán sản phẩm tiêu dùng / Hệ thống dịch vụ vận chuyển / Nền tảng booking / Ứng dụng TMĐT di động...
+* Xác định khách hàng mục tiêu, giá trị mang lại.
+  
+
+*(System introduction and business purpose)*
+
+Mô tả tổng quan hệ thống, mục tiêu kinh doanh, giá trị mang lại, và đối tượng người dùng.
+*(Describe the overall system, business goals, value proposition, and user audience.)*
+
+
+
 * **Bối cảnh và lý do chọn đề tài**
-* **Mục tiêu nghiên cứu / thiết kế**
+* **Mục tiêu nghiên cứu**
+Dưới đây là **các gợi ý Mục tiêu nghiên cứu (Research Objectives)** cho chủ đề **“Hệ thống Thương mại điện tử (E-commerce System)”**, được chia theo **3 mức độ**: cơ bản – ứng dụng – nâng cao, phù hợp với sinh viên làm **đồ án hoặc nghiên cứu khoa học** 👇
+
+---
+
+## 🎯 **I. Mục tiêu tổng quát (General Objective)**
+
+> Nghiên cứu, phân tích và thiết kế một hệ thống Thương mại điện tử nhằm hỗ trợ hoạt động giao dịch, mua bán hàng hóa/dịch vụ trên nền tảng trực tuyến, đáp ứng yêu cầu thực tiễn và đảm bảo khả năng mở rộng, bảo mật, và trải nghiệm người dùng.
+
+---
+
+## 🎯 **II. Mục tiêu cụ thể (Specific Objectives)**
+
+### **1. Mức độ cơ bản (Basic Level)**
+
+Dành cho đồ án thiên về **phân tích & thiết kế hệ thống**
+
+* Phân tích yêu cầu người dùng và xác định các chức năng chính của hệ thống TMĐT.
+* Thiết kế các mô hình **Use Case, Class, Sequence, Activity Diagram** để mô tả logic nghiệp vụ.
+* Thiết kế cơ sở dữ liệu quan hệ (ERD) hỗ trợ các nghiệp vụ mua bán trực tuyến.
+* Xây dựng giao diện người dùng (UI) thân thiện, phù hợp với trải nghiệm khách hàng (UX).
+* Trình bày kiến trúc hệ thống (System Architecture) theo hướng **Layered hoặc Tiered**.
+
+---
+
+### **2. Mức độ ứng dụng (Applied Level)**
+
+Dành cho đồ án có yếu tố **phát triển và thử nghiệm sản phẩm mẫu (prototype)**
+
+* Phát triển mô hình mẫu hệ thống TMĐT (Web hoặc Mobile) sử dụng ngôn ngữ lập trình hiện đại (VD: Laravel, Node.js, React, Flutter...).
+* Ứng dụng **kiến trúc Microservices hoặc Microkernel** để tăng khả năng mở rộng hệ thống.
+* Tích hợp **cổng thanh toán trực tuyến (Online Payment Gateway)** và **chức năng quản lý đơn hàng (Order Management)**.
+* Kiểm thử chức năng và đánh giá hiệu năng cơ bản của hệ thống.
+* Đề xuất hướng cải tiến nhằm nâng cao trải nghiệm người dùng hoặc tối ưu quy trình bán hàng.
+
+---
+
+### **3. Mức độ nâng cao (Advanced / Research Level)**
+
+Dành cho đề tài có yếu tố **nghiên cứu – đổi mới sáng tạo**
+
+* Nghiên cứu ứng dụng **AI/ML trong cá nhân hóa trải nghiệm khách hàng** (gợi ý sản phẩm, chatbot tư vấn, dự báo nhu cầu...).
+* Xây dựng **kiến trúc Cloud-based hoặc SaaS** cho hệ thống TMĐT đa người dùng.
+* Tích hợp **RPA (Robotic Process Automation)** để tự động hóa các quy trình nghiệp vụ (xử lý đơn, gửi email, cập nhật tồn kho...).
+* Phân tích và đánh giá **hiệu năng, bảo mật, và khả năng mở rộng** của các mô hình kiến trúc (Monolithic vs Microservices).
+* Đề xuất mô hình **E-commerce 4.0** ứng dụng **Blockchain, IoT hoặc Knowledge Graph**.
+
+---
+
+## 📘 **Ví dụ Mục tiêu nghiên cứu (Samples)**
+
+| STT | Chủ đề nghiên cứu                                    | Mục tiêu cụ thể                                                                                                |
+| --- | ---------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| 1   | Hệ thống bán hàng trực tuyến cho cửa hàng thời trang | Phân tích và thiết kế hệ thống TMĐT hỗ trợ quản lý sản phẩm, giỏ hàng, thanh toán và quản trị đơn hàng.        |
+| 2   | Ứng dụng Chatbot AI trong TMĐT                       | Xây dựng chatbot hỗ trợ khách hàng tự động trả lời câu hỏi và gợi ý sản phẩm dựa trên lịch sử mua hàng.        |
+| 3   | Hệ thống TMĐT dựa trên kiến trúc Microservices       | Đề xuất và triển khai mô hình kiến trúc Microservices nhằm cải thiện hiệu năng và khả năng mở rộng hệ thống.   |
+| 4   | Nền tảng TMĐT SaaS cho nhiều nhà bán hàng            | Nghiên cứu và xây dựng nền tảng SaaS cho phép nhiều cửa hàng đăng ký và vận hành độc lập.                      |
+| 5   | Phân tích hành vi người dùng trong TMĐT              | Ứng dụng học máy để phân tích dữ liệu hành vi mua sắm, nhằm cá nhân hóa nội dung hiển thị cho từng khách hàng. |
+
+---
+
+Bạn có muốn mình tạo **file `.docx`** mẫu “Mục tiêu nghiên cứu cho Hệ thống TMĐT” (song ngữ Việt–Anh, trình bày theo chuẩn đề tài nghiên cứu khoa học) để sinh viên có thể chọn dùng trực tiếp không?
+
+  
 * **Phạm vi hệ thống (Scope)**
-* **Phương pháp thực hiện** (mô tả ngắn: UML, BPMN, Database Design, UI Mockup, v.v.)
 * **Cấu trúc báo cáo**
 
 ---
