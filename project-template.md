@@ -257,9 +257,6 @@ rectangle "Plugins" {
 | File báo cáo    | .docx và .pdf                       |
 | File thiết kế   | .puml, .png hoặc .jpg                 |
 | Demo (tùy chọn) | Video hoặc Link chạy thử              |
-| Deadline        |                                       |
-| Nộp tại         | LMS / Google Drive / Email giảng viên |
-
 
 ---
 
