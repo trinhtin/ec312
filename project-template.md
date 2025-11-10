@@ -215,13 +215,8 @@ rectangle "Plugins" {
 
 ### **5. Demo & Báo cáo (Demo & Reporting)**
 
-* Demo (prototype hoặc web nhỏ) tập trung vào **các chức năng chính (Use Case)** mà sinh viên chọn.  
-* Có thể dùng: Laravel, Django, Node.js, React, Flutter, hoặc No-code tool (Wix, Shopify, WooCommerce).
-
-  
-* Công nghệ sử dụng (HTML/CSS, Laravel, NodeJS, MySQL, Figma, v.v.)
-* Một số màn hình demo chính hoặc mô phỏng chức năng
-
+* Một số màn hình demo chính hoặc mô phỏng chức năng (prototype hoặc web nhỏ) tập trung vào **các chức năng chính (Use Case)** mà sinh viên chọn.  
+* Có thể dùng: HTML/CSS, Figma, Laravel, Django, Node.js, React, Flutter, hoặc No-code tool (Wix, Shopify, WooCommerce)
 
 ---
 
@@ -252,20 +247,14 @@ rectangle "Plugins" {
 
 ---
 
-### 👩‍💻 **Yêu cầu nhóm thực hiện:**
-
+### ✅ **Yêu cầu nộp bài (Submission Requirements)**
 * Nhóm **tối đa 6 sinh viên**.
 * Mỗi thành viên chịu trách nhiệm **phân tích – thiết kế một chức năng riêng**.
 * Có **sơ đồ Use Case tổng hợp** toàn hệ thống.
-* Báo cáo dạng **PDF + Source code / Prototype / Video Demo (nếu có)**.
-
----
-
-### ✅ **Yêu cầu nộp bài (Submission Requirements)**
 
 | Mục             | Yêu cầu                               |
 | --------------- | ------------------------------------- |
-| File báo cáo    | .docx hoặc .pdf                       |
+| File báo cáo    | .docx và .pdf                       |
 | File thiết kế   | .puml, .png hoặc .jpg                 |
 | Demo (tùy chọn) | Video hoặc Link chạy thử              |
 | Deadline        |                                       |
@@ -274,7 +263,7 @@ rectangle "Plugins" {
 
 ---
 
-## Mục tiêu nghiên cứu (Research Objectives)** cho chủ đề **“Hệ thống Thương mại điện tử (E-commerce System)”**
+## GỢI Ý MỤC TIÊU NGHIÊN CỨU (RESEARCH OBJECTIVES) CHO CHỦ ĐỀ  THIẾT KẾ HỆ THỐNG THƯƠNG MẠI ĐIỆN TỬ
 
 ### 🎯 **I. Mục tiêu tổng quát (General Objective)**
 
