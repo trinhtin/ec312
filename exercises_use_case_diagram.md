@@ -272,40 +272,7 @@ Sinh viên hiểu cách mô hình hóa các chức năng chính trong một hệ
 
 ---
 
-## 📊 **5. Use Case Diagram (PlantUML Code)**
-
-```plantuml
-@startuml
-title Use Case Diagram – B2C E-commerce Website
-
-actor Customer
-actor "Payment Gateway" as PG
-actor System
-
-rectangle "E-commerce Website" {
-  usecase (Browse Products) as UC1
-  usecase (Add to Cart) as UC2
-  usecase (Checkout) as UC3
-  usecase (Make Payment) as UC4
-  usecase (View Order History) as UC5
-
-  UC4 --> UC3 : <<include>>
-}
-
-Customer --> UC1
-Customer --> UC2
-Customer --> UC3
-Customer --> UC5
-PG --> UC4
-System --> UC3
-System --> UC4
-
-@enduml
-```
-
----
-
-## 🧠 **6. Giải thích sơ đồ (Explanation)**
+## 🧠 **5. Giải thích sơ đồ (Explanation)**
 
 | Thành phần                            | Ý nghĩa                                                                                      |
 | ------------------------------------- | -------------------------------------------------------------------------------------------- |
@@ -316,7 +283,7 @@ System --> UC4
 
 ---
 
-## 🧩 **7. Mô tả Use Case chính (Checkout)**
+## 🧩 **6. Mô tả Use Case chính (Checkout)**
 
 | Thuộc tính                              | Nội dung                                                                                                                                                                                                                                                      |
 | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -330,7 +297,7 @@ System --> UC4
 
 ---
 
-## 💡 **8. Gợi ý mở rộng (Advanced tasks)**
+## 💡 **7. Gợi ý mở rộng (Advanced tasks)**
 
 * Thêm Use Case “Cancel Order” (Hủy đơn hàng) — *extend → View Order History*.
 * Tách phần “Shipping Service” làm actor riêng khi mô hình hóa hệ thống lớn hơn.
@@ -449,42 +416,7 @@ Khi khách hàng đặt hàng, **Hệ thống** sẽ tự động chuyển đơn
 * **Handle Return** → `<<extend>>` → **Track Shipment**
   *(Vì xử lý trả hàng chỉ xảy ra nếu có vấn đề trong quá trình giao)*
 
----
-
-### 🧭 **5. Sơ đồ Use Case (PlantUML)**
-
-```plantuml
-@startuml
-actor Customer
-actor Seller
-actor Supplier
-actor System
-
-rectangle "Dropshipping Platform" {
-  usecase (Sync Product Data) as UC1
-  usecase (Place Customer Order) as UC2
-  usecase (Forward Order to Supplier) as UC3
-  usecase (Track Shipment) as UC4
-  usecase (Handle Return) as UC5
-
-  UC3 --> UC2 : <<include>>
-  UC5 --> UC4 : <<extend>>
-}
-
-Seller --> UC1
-Customer --> UC2
-Customer --> UC4
-Seller --> UC4
-Supplier --> UC3
-System --> UC3
-System --> UC4
-System --> UC5
-@enduml
-```
-
----
-
-### 📘 **6. Diễn giải sơ đồ (Explanation)**
+### 📘 **5. Diễn giải sơ đồ (Explanation)**
 
 * **Customer** tương tác chính với hệ thống để **đặt hàng** và **theo dõi giao hàng**.
 * **Seller** đăng sản phẩm thông qua **đồng bộ dữ liệu sản phẩm (Sync Product Data)**.
