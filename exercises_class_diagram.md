@@ -94,3 +94,108 @@ Thiết kế class diagram cho quản lý người dùng:
 
 4. **Áp dụng các design pattern phù hợp:** Strategy, Factory, Observer...
 
+---
+
+## **Bài tập 6: Hệ thống TMĐT với nhiều loại người dùng và phân quyền**
+
+**Gợi ý lớp:**
+
+* `User` (lớp cha chung): `userId`, `username`, `password`, `email`; phương thức: `login()`, `logout()`.
+* `Customer` kế thừa `User`: thêm `address`, `phoneNumber`, phương thức `browseProduct()`, `placeOrder()`, `writeReview()`.
+* `Admin` kế thừa `User`: phương thức `manageUser()`, `manageProduct()`, `manageOrder()`.
+* `WarehouseStaff` kế thừa `User`: phương thức `updateInventory()`, `processShipment()`.
+* `Supplier` kế thừa `User`: phương thức `addProduct()`, `updateProduct()`.
+
+**Gợi ý các lớp liên quan:**
+
+* `Product`: `productId`, `name`, `price`, `description`, `stockQuantity`; phương thức `updateStock()`, `checkAvailability()`.
+* `Order`: `orderId`, `orderDate`, `status`; phương thức `calculateTotal()`, `updateStatus()`.
+* `Inventory`: `inventoryId`, `product`, `quantityAvailable`; phương thức `updateQuantity()`.
+
+**Quan hệ:**
+
+* Kế thừa: `Customer`, `Admin`, `WarehouseStaff`, `Supplier` từ `User`.
+* Liên kết: `Customer` ↔ `Order`; `Order` ↔ `Product`; `WarehouseStaff` ↔ `Inventory`.
+
+---
+
+## **Bài tập 7: Hệ thống TMĐT tích hợp chương trình khuyến mãi phức tạp**
+
+**Gợi ý lớp:**
+
+* `Customer`: `customerId`, `name`, `email`; phương thức: `addToCart()`, `checkout()`.
+* `Admin`: `adminId`, `name`; phương thức: `createPromotion()`, `updatePromotion()`, `deletePromotion()`.
+* `Product`: `productId`, `name`, `price`, `stockQuantity`; phương thức `updateStock()`.
+* `ShoppingCart`: `cartId`, danh sách sản phẩm, `totalAmount`; phương thức `addItem()`, `removeItem()`, `applyPromotion()`.
+* `Order`: `orderId`, `orderDate`, `status`; phương thức `calculateTotal()`.
+* `Promotion` / `Coupon`: `promotionId`, `discountPercent`, `discountAmount`, `expiryDate`; phương thức `applyPromotion()`.
+
+**Quan hệ:**
+
+* `Customer` ↔ `ShoppingCart` ↔ `Product`.
+* `ShoppingCart` ↔ `Promotion` (có thể áp dụng nhiều loại).
+* `Order` ↔ `Customer`; `Order` ↔ `Product`.
+
+---
+
+## **Bài tập 8: Hệ thống Marketplace với đánh giá và phân loại sản phẩm**
+
+**Gợi ý lớp:**
+
+* `Customer`: `customerId`, `name`, `email`; phương thức: `placeOrder()`, `writeReview()`.
+* `Seller`: `sellerId`, `shopName`; phương thức: `addProduct()`, `updateProduct()`.
+* `Product`: `productId`, `name`, `price`, `description`, `stockQuantity`; phương thức `updateStock()`.
+* `Category`: `categoryId`, `categoryName`; phương thức `addProduct()`, `removeProduct()`.
+* `Review`: `reviewId`, `rating`, `comment`; phương thức `submitReview()`.
+* `Wishlist`: `wishlistId`, danh sách sản phẩm; phương thức `addProduct()`, `removeProduct()`.
+* `Order`: `orderId`, `orderDate`, `status`; phương thức `calculateTotal()`.
+
+**Quan hệ:**
+
+* `Seller` ↔ `Product` (1-n)
+* `Product` ↔ `Category` (n-n)
+* `Customer` ↔ `Wishlist` (1-1)
+* `Customer` ↔ `Review` ↔ `Product` (1-n, n-1)
+* `Customer` ↔ `Order` ↔ `Product`
+
+---
+
+## **Bài tập 9: Hệ thống TMĐT quản lý kho và vận chuyển nâng cao**
+
+**Gợi ý lớp:**
+
+* `Customer`: `customerId`, `name`; phương thức `placeOrder()`.
+* `Product`: `productId`, `name`, `stockQuantity`; phương thức `updateStock()`.
+* `Inventory`: `inventoryId`, `product`, `quantityAvailable`; phương thức `updateQuantity()`.
+* `Order`: `orderId`, `orderDate`, `status`; phương thức `calculateTotal()`, `splitShipment()`.
+* `Shipment`: `shipmentId`, `shipmentDate`, `shippingMethod`, `status`; phương thức `shipOrder()`, `updateStatus()`.
+* `WarehouseStaff`: `staffId`, `name`; phương thức `processShipment()`, `updateInventory()`.
+
+**Quan hệ:**
+
+* `Inventory` ↔ `Product` (1-1 hoặc 1-n)
+* `Order` ↔ `Product` (n-n)
+* `Order` ↔ `Shipment` (1-n)
+* `WarehouseStaff` ↔ `Shipment` (1-n)
+
+---
+
+## **Bài tập 10: Hệ thống TMĐT đa kênh với lịch sử giao dịch**
+
+**Gợi ý lớp:**
+
+* `User` (lớp cha)
+* `Customer` kế thừa `User`: phương thức `placeOrder()`, `viewTransactionHistory()`, `downloadInvoice()`.
+* `Admin` kế thừa `User`: phương thức `generateReport()`, `analyzeSales()`.
+* `Product`: `productId`, `name`, `price`, `stockQuantity`; phương thức `updateStock()`.
+* `Order`: `orderId`, `orderDate`, `status`; phương thức `calculateTotal()`.
+* `Payment`: `paymentId`, `amount`, `paymentMethod`; phương thức `processPayment()`.
+* `TransactionHistory`: `transactionId`, `date`, `details`; phương thức `recordTransaction()`.
+
+**Quan hệ:**
+
+* `Customer` ↔ `Order` ↔ `Product`
+* `Order` ↔ `Payment` (1-1)
+* `Customer` ↔ `TransactionHistory` (1-n)
+* `Admin` ↔ báo cáo doanh thu (không cần lưu lớp dữ liệu riêng, chỉ là hành vi)
+
