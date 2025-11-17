@@ -1,12 +1,4 @@
-
-Dưới đây là **phiên bản song ngữ Việt – Anh** cho **5 bài tập Class Diagram** của hệ thống TMĐT.
-Định dạng được giữ nguyên, mô tả rõ ràng để sinh viên dễ sử dụng cho bài tập hoặc đề kiểm tra.
-
----
-
-# **Bài Tập 1: Hệ Thống Quản Lý Sản Phẩm Cơ Bản**
-
-# **Exercise 1: Basic Product Management System**
+# **Bài Tập 1: Hệ Thống Quản Lý Sản Phẩm Cơ Bản (Basic Product Management System)**
 
 **Yêu cầu / Requirements:**
 Thiết kế class diagram cho module quản lý sản phẩm với các yêu cầu:
@@ -69,9 +61,7 @@ Cần các class / Required classes:
 
 ---
 
-# **Bài Tập 2: Hệ Thống Đặt Hàng và Thanh Toán**
-
-# **Exercise 2: Order and Payment System**
+# **Bài Tập 2: Hệ Thống Đặt Hàng và Thanh Toán (Order and Payment System)**
 
 **Yêu cầu / Requirements:**
 Thiết kế class diagram cho quy trình đặt hàng:
@@ -144,9 +134,7 @@ Cần các class / Required classes:
 
 ---
 
-# **Bài Tập 3: Hệ Thống Giỏ Hàng và Khuyến Mãi**
-
-# **Exercise 3: Shopping Cart and Promotion System**
+# **Bài Tập 3: Hệ Thống Giỏ Hàng và Khuyến Mãi (Shopping Cart and Promotion System)**
 
 **Yêu cầu / Requirements:**
 Thiết kế class diagram cho giỏ hàng và chương trình khuyến mãi:
@@ -215,9 +203,7 @@ Cần các class / Required classes:
 
 ---
 
-# **Bài Tập 4: Hệ Thống Đánh Giá và Nhận Xét**
-
-# **Exercise 4: Review and Rating System**
+# **Bài Tập 4: Hệ Thống Đánh Giá và Nhận Xét (Review and Rating System)**
 
 **Yêu cầu / Requirements:**
 Thiết kế class diagram cho module đánh giá sản phẩm:
@@ -291,9 +277,7 @@ Cần các class / Required classes:
   
 ---
 
-# **Bài Tập 5: Hệ Thống Người Dùng và Phân Quyền**
-
-# **Exercise 5: User Management and Role-Based Access Control**
+# **Bài Tập 5: Hệ Thống Người Dùng và Phân Quyền (User Management and Role-Based Access Control)**
 
 **Yêu cầu / Requirements:**
 Thiết kế class diagram cho quản lý người dùng:
