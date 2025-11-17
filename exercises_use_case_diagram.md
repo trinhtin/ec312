@@ -1,3 +1,5 @@
+# BÀI TẬP VẼ USE CASE DIAGRAM CƠ BẢN
+
 ## 🧩 **Bài 1 – Đăng ký và đăng nhập (User Registration & Login)**
 
 **FR-01:** The system shall allow customers to register, log in, and log out.
@@ -89,14 +91,13 @@
 **Hint:** Extend from “Report Review” → “Moderate Review.”
 *(Gợi ý: Dùng extend từ “Báo cáo đánh giá” sang “Kiểm duyệt đánh giá.”)*
 
-Dưới đây là **5 bài tập vẽ full Use Case Diagram** cho các mô hình **hệ thống Thương mại điện tử (TMĐT)** phổ biến, được trình bày **song ngữ Việt – Anh (English in parentheses)**.
-Các bài tập được sắp xếp từ **cơ bản đến nâng cao**, bao gồm **nhiều actor, mối quan hệ include/extend**, và có thể dùng cho sinh viên **vẽ sơ đồ Use Case hoàn chỉnh**.
+---
+
+# BÀI TẬP VẼ USE CASE DIAGRAM NÂNG CAO
 
 ---
 
 ### 🛒 **Bài 6 – B2C E-commerce Website (Trang TMĐT Bán hàng cho khách cá nhân)**
-
-**Mức độ:** Dễ
 
 **Mô tả (Description):**
 Hệ thống cho phép khách hàng duyệt sản phẩm, thêm vào giỏ hàng, đặt hàng và thanh toán trực tuyến.
@@ -144,8 +145,6 @@ Hệ thống kết nối các doanh nghiệp mua và bán hàng hóa sỉ, có q
 
 ### 📦 **Bài 8 – Dropshipping Platform (Nền tảng bán hàng ký gửi)**
 
-**Mức độ:** Trung bình – Khá
-
 **Mô tả (Description):**
 Nền tảng cho phép người bán đăng sản phẩm của nhà cung cấp và hệ thống tự động xử lý đơn hàng.
 *(The platform enables sellers to list supplier products, and automatically forwards orders to suppliers.)*
@@ -168,8 +167,6 @@ Nền tảng cho phép người bán đăng sản phẩm của nhà cung cấp v
 ---
 
 ### 📱 **Bài 9 – Mobile Commerce App (Ứng dụng TMĐT di động)**
-
-**Mức độ:** Khá – Nâng cao
 
 **Mô tả (Description):**
 Ứng dụng TMĐT hỗ trợ thanh toán qua ví điện tử, push notification và chương trình khách hàng thân thiết.
@@ -194,8 +191,6 @@ Nền tảng cho phép người bán đăng sản phẩm của nhà cung cấp v
 ---
 
 ### ☁️ **Bài 10 – Cloud-based SaaS E-commerce Solution (Giải pháp TMĐT SaaS dựa trên đám mây)**
-
-**Mức độ:** Nâng cao
 
 **Mô tả (Description):**
 Hệ thống SaaS cho phép doanh nghiệp tạo và quản lý cửa hàng TMĐT riêng của họ trên nền tảng đám mây.
@@ -507,10 +502,6 @@ Người dùng có thể đăng ký, duyệt sản phẩm, lưu yêu thích, tha
 
 # Bài 10 – Cloud-based SaaS E-commerce Solution (Giải pháp TMĐT SaaS dựa trên đám mây)
 
-**Mức độ:** Nâng cao
-
----
-
 ## 🧭 **1. Mô tả tổng quan (Overview)**
 
 **Mô tả (Description):**
@@ -602,10 +593,3 @@ Hệ thống **SaaS E-commerce Platform** cho phép các doanh nghiệp hoặc c
 * Mô hình hóa mối quan hệ **đa tác nhân (multi-actor)** trong **một hệ thống SaaS phức tạp**.
 * Thể hiện sự **phối hợp giữa tác nhân nội bộ (System)** và **ngoại vi (Payment Gateway, Support Staff)**.
 * Kết hợp **include / extend** để minh họa luồng xử lý mở rộng và tái sử dụng trong Use Case.
-
-
-
-
-
-
-
