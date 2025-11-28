@@ -130,25 +130,6 @@ Mỗi sinh viên viết đặc tả chi tiết cho 1 Use Case:
 | **Microkernel (Plugin-based)** | Lõi hệ thống mở rộng qua plugin.                               | Odoo E-commerce, Magento                       |
 | **Cloud-based / SaaS**         | Ứng dụng triển khai trên đám mây.                              | Shopify Cloud, Salesforce Commerce Cloud       |
 
-### Sơ đồ kiến trúc mẫu (Architecture Diagram Examples)
-
-#### (a) Layered Architecture
-
-```plantuml
-@startuml
-title Layered Architecture for E-commerce
-rectangle "Presentation Layer" {
-  [Web UI] --> [Business Layer]
-}
-rectangle "Business Layer" {
-  [Order Service] --> [Data Access Layer]
-  [Payment Service] --> [Data Access Layer]
-}
-rectangle "Data Access Layer" {
-  [Database]
-}
-@enduml
-```
 
 #### **4.2. Thiết kế cơ sở dữ liệu (Database Design)**
 
