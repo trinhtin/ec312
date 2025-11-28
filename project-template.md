@@ -150,47 +150,6 @@ rectangle "Data Access Layer" {
 @enduml
 ```
 
-#### (b) Tiered Architecture
-
-```plantuml
-@startuml
-title 3-Tier E-commerce Architecture
-actor User
-rectangle "Client Tier" {
-  [Browser / Mobile App]
-}
-rectangle "Application Tier" {
-  [E-commerce Server]
-}
-rectangle "Data Tier" {
-  [Database Server]
-}
-User --> [Browser / Mobile App]
-[Browser / Mobile App] --> [E-commerce Server]
-[E-commerce Server] --> [Database Server]
-@enduml
-```
-
-#### (c) Microkernel (Plugin-based)
-
-```plantuml
-@startuml
-title Microkernel Architecture (Plugin-based)
-rectangle "Core System" {
-  [Order Core] 
-  [Inventory Core]
-}
-rectangle "Plugins" {
-  [Payment Plugin] 
-  [Shipping Plugin]
-  [Promotion Plugin]
-}
-[Payment Plugin] --> [Order Core]
-[Shipping Plugin] --> [Inventory Core]
-[Promotion Plugin] --> [Order Core]
-@enduml
-```
-
 #### **4.2. Thiết kế cơ sở dữ liệu (Database Design)**
 
 * Mô hình ERD (Entity Relationship Diagram).
