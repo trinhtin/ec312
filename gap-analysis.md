@@ -101,6 +101,39 @@ Với nhóm này, bạn **không viết User Stories cho phần mềm** vì ph�
 
 ---
 
+## III. CÁCH VẼ USE CASE DIAGRAM CHO HƯỚNG BUY/CUSTOMIZE
+Có, bạn **vẫn nên vẽ Use Case Diagram** trong hướng Buy & Customize, nhưng **mức độ chi tiết và trọng tâm sẽ khác hoàn toàn** so với hướng Build from scratch.
+
+Sự thay đổi về cách tiếp cận Use Case Diagram trong chiến lược Buy & Customize thể hiện rõ qua các điểm trọng tâm sau:
+
+### 1. Phân định rõ "Phần có sẵn" và "Phần customize" trên sơ đồ
+
+Thay vì vẽ một sơ đồ mô tả toàn bộ hệ thống từ A đến Z (vốn đã được phần mềm mua sẵn giải quyết phần lớn), Use Case Diagram trong dự án Buy & Customize cần đánh dấu rõ ranh giới để đội ngũ phát triển và các bên liên quan dễ hình dung:
+
+* **Các Use Case tiêu chuẩn (Out-of-the-box):** Ví dụ như *Đăng ký tài khoản, Thêm vào giỏ hàng, Thanh toán qua cổng VNPay tiêu chuẩn*. Với các Use Case này, bạn không cần vẽ kịch bản chi tiết hay viết tài liệu đặc tả sâu, chỉ cần xem chúng như các **khối chức năng có sẵn (Black-box)**.
+* **Các Use Case phát sinh từ GAP (Custom / Extended Use Cases):** Đây là trọng tâm chính của sơ đồ. Ví dụ: *Đồng bộ tồn kho với ERP, Áp dụng mã giảm giá sinh nhật tự động, Quản lý phân quyền đại lý cấp 2*. Những Use Case này cần được vẽ tách bạch hoặc tô điểm chú thích riêng để khoanh vùng khối lượng công việc phải code thêm.
+
+### 2. Sử dụng mối quan hệ giữa các Use Case (Include & Extend) để thể hiện sự tùy biến
+
+Trong mô hình Buy & Customize, các ký hiệu quan hệ trong Use Case Diagram rất hữu ích để chỉ ra cách mà tính năng mới bám vào nền tảng gốc:
+
+* Dùng quan hệ **`<<extend>>`**: Thể hiện việc tính năng custom sẽ móc nối (hook vào) điểm nào của hệ thống gốc mà không làm hỏng luồng chuẩn.
+* *Ví dụ:* Luồng thanh toán chuẩn của Shopify (`Checkout`) có thêm một Use Case mở rộng (`<<extend>>`) là `Áp dụng chiết khấu đặc thù theo hợp đồng đại lý riêng của doanh nghiệp`.
+
+
+* Dùng quan hệ **`<<include>>`**: Thể hiện các module tích hợp trung gian (Middleware/API connector) bắt buộc phải chạy ngầm mỗi khi một hành động nghiệp vụ xảy ra.
+* *Ví dụ:* Use Case `Tạo đơn hàng mới` sẽ `<<include>>` luôn Use Case `Đẩy dữ liệu đơn hàng sang hệ thống ERP nội bộ`.
+
+
+
+### 3. Use Case Diagram phục vụ cho việc gì trong Buy & Customize?
+
+Vì không phải lập trình lại từ đầu, việc vẽ Use Case Diagram trong trường hợp này chủ yếu phục vụ 3 mục đích cốt lõi:
+
+* **Làm "Bản đồ tích hợp" cho kiến trúc sư phần mềm (Solution Architect):** Giúp nhìn nhanh xem các phần mềm bên ngoài (ERP, WMS, MISA) sẽ chích xuất dữ liệu hoặc tương tác vào đâu của hệ thống E-commerce gốc.
+* **Thống nhất phạm vi (Scope) với nhà cung cấp dịch vụ (Vendor/Dev Team):** Tránh việc hiểu lầm giữa hai bên về việc "tính năng này tưởng là có sẵn hóa ra phải code thêm". Sơ đồ giúp khoanh vùng chính xác những Use Case nào nằm trong gói Buy và Use Case nào nằm trong gói Customize.
+* **Làm căn cứ để Tester viết Test Case cho phần Custom:** QA sẽ nhìn vào các Use Case tùy biến để tập trung viết kịch bản kiểm thử cho những phần code mới viết thêm, thay vì mất thời gian test lại các tính năng chuẩn của nền tảng (vốn đã được nhà cung cấp gốc đảm bảo ổn định).
+
 ### Tóm lại
 
 * Các tính năng **có sẵn (Out-of-the-box)** của hệ thống Buy: **Không cần viết** lại User Stories/Use Cases chi tiết từ đầu, chỉ cần tham khảo tài liệu hướng dẫn (User Manual) của nhà cung cấp nền tảng và viết tài liệu cấu hình (Configuration Guide).
