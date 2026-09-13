@@ -1,3 +1,5 @@
+## I. QUY TRÌNH PHÂN TÍCH GAP ANALYSIS CHO HƯỚNG BUY/CUSTOMIZE KHI THIẾT KẾ HỆ THỐNG TMĐT 
+
 Khi theo đuổi chiến lược **Mua giải pháp có sẵn (Buy - COTS/SaaS như Shopify Plus, Haravan, Magento/Adobe Commerce)** rồi **Tự chỉnh sửa/Tùy biến (Customize)** theo đặc thù doanh nghiệp, **GAP-Analysis (Phân tích khoảng trống)** đóng vai trò chiếc cầu nối sống còn. Phương pháp này xác định chính xác những điểm mà phần mềm sẵn có **không đáp ứng được (Gaps)**, từ đó cân nhắc phương án giải quyết (lập trình tùy chỉnh, thay đổi quy trình nghiệp vụ, hoặc chấp nhận bỏ qua).
 
 Quy trình thực hiện GAP-Analysis cho chiến lược Buy & Customize gồm các bước chi tiết sau:
@@ -56,6 +58,8 @@ Sau khi liệt kê toàn bộ các Gaps, đối chiếu từng Gap với tiêu c
 * Cố gắng giữ phần **Core (Lõi)** của nền tảng nguyên bản (Out-of-the-box) tối đa từ **70% - 80%**.
 * Chỉ giới hạn phần **Customize (Tùy biến)** trong khoảng **20% - 30%** dành riêng cho các lợi thế cạnh tranh cốt lõi (Core Competencies) của doanh nghiệp. Những yêu cầu nào không quá quan trọng, hãy ép các phòng ban **"Fit-to-Standard"** (điều chỉnh quy trình theo phần mềm).
 
+
+## II. CÁCH VIẾT DOCUMENT (USER STORIES/USE CASES) CHO HƯỚNG BUY/CUSTOMIZE KHI THIẾT KẾ HỆ THỐNG TMĐT 
 
 Việc chuyển đổi từ kết quả GAP-Analysis sang **User Stories** (trong Agile/Scrum) hoặc **Use Cases** (trong quản trị yêu cầu truyền thống/RUP) là bước bắt buộc tiếp theo.
 
