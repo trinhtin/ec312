@@ -138,3 +138,102 @@ Vì không phải lập trình lại từ đầu, việc vẽ Use Case Diagram t
 
 * Các tính năng **có sẵn (Out-of-the-box)** của hệ thống Buy: **Không cần viết** lại User Stories/Use Cases chi tiết từ đầu, chỉ cần tham khảo tài liệu hướng dẫn (User Manual) của nhà cung cấp nền tảng và viết tài liệu cấu hình (Configuration Guide).
 * Các khoảng trống **(Gaps)** cần customize, phát triển thêm hoặc tích hợp: **Phải viết** thành User Stories hoặc Use Cases rõ ràng làm cơ sở cho Dev code và QA test.
+
+## IV. CÁCH BIỂU DIỄN NHỮNG USE CASE ĐÃ CÓ SẴN TRONG HỆ THỐNG DỰ ĐỊNH MUA VS USE CASE CUSTOM
+Trong một sơ đồ Use Case Diagram, khi một tính năng được coi là **tiêu chuẩn (Out-of-the-box)** và hoạt động như một **hộp đen (Black-box)**, cách thể hiện rất đơn giản: **Bạn vẫn vẽ nó như một Use Case bình thường, nhưng không đi sâu vào chi tiết bên trong của nó.**
+
+Bạn có thể hình dung qua cách biểu diễn trực quan và bản chất của nó như sau:
+
+### 1. Hình thức thể hiện trên sơ đồ (Diagram)
+
+* Vẫn dùng hình bầu dục (ellipse) để vẽ Use Case đó, kết nối với Actor (người dùng/hệ thống tương tác).
+* **Điểm khác biệt:** Bên trong hình bầu dục đó hoặc trong tài liệu kèm theo, bạn **không** vẽ thêm các bước chi tiết phụ, không bóc tách các luồng nhỏ xíu (như bấm nút nào, validate ra sao), vì nền tảng gốc (như Shopify, Magento, Haravan) đã tự lo phần đó rồi.
+* *Ví dụ:* Bạn vẫn vẽ Actor **Khách hàng** nối với hình bầu dục **Thanh toán đơn hàng**, nhưng bạn mặc định hiểu đây là cổng thanh toán chuẩn có sẵn của hệ thống, không cần bàn cãi hay thiết kế lại logic.
+
+### 2. Tại sao gọi là "Hộp đen" (Black-box)?
+
+Trong ngành kỹ thuật phần mềm, một tính năng là "hộp đen" nghĩa là:
+
+* **Bạn chỉ quan tâm đến Đầu vào (Input) và Đầu ra (Output):**
+* *Input:* Khách bấm nút "Thanh toán".
+* *Black-box (Hộp đen):* Hệ thống tự chạy ngầm xử lý (đổi trạng thái đơn, gọi ngân hàng, trừ tiền...). Bạn không cần biết bên trong code của nền tảng nó viết gì.
+* *Output:* Trả về màn hình "Đặt hàng thành công".
+
+
+* Vì nó là "hộp đen" có sẵn, bạn chỉ cần đặt nó lên sơ đồ để **khẳng định phạm vi (Scope)** rằng: *"Hệ thống mua về đã có sẵn tính năng này, chúng ta không phải code lại từ đầu"*.
+
+### 3. Đặt cạnh phần Custom để thấy sự tương phản
+
+Khi nhìn vào một Use Case Diagram của dự án Buy & Customize, sự khác biệt giữa **Black-box (có sẵn)** và **Custom (phải làm thêm)** sẽ hiển thị rất rõ:
+
+* **Use Case tiêu chuẩn (Black-box):**
+* `[Khách hàng]` ──> ( Thêm sản phẩm vào giỏ hàng ) *<- Cục này mua sẵn có rồi, vẽ cho đủ bộ khung.*
+
+
+* **Use Case Custom (Phải mổ xẻ chi tiết):**
+* `[Nhân viên kho]` ──> ( Đồng bộ tồn kho real-time qua API với SAP ) *<- Cục này không có sẵn, là GAP cần custom, phải viết tài liệu chi tiết cách nó truyền dữ liệu.*
+
+
+
+### Tóm lại
+
+Khi vẽ các Use Case tiêu chuẩn/black-box, bạn chỉ cần **gọi tên tính năng** trên sơ đồ để bức tranh tổng thể hệ thống được liền mạch và rõ ràng. Hãy xem chúng như những khối Lego đã được đúc sẵn trong hộp, việc của bạn chỉ là đặt chúng vào đúng vị trí trên bản thiết kế, thay vì phải ngồi tạc lại từ đầu.
+
+## V. CÁCH DOCUMENT USE CASE CUSTOM
+Đối với các **Custom Use Case** (những tính năng khoảng trống - GAP bắt buộc phải lập trình hoặc tích hợp thêm), tài liệu đặc tả (Documentation) cần phải chi tiết, kỹ thuật và rõ ràng để đội ngũ Lập trình (Dev) có thể viết code và đội ngũ Kiểm thử (QA) viết Test Case mà không phải đoán ý.
+
+Một tài liệu đặc tả chuẩn cho một Custom Use Case thường bao gồm các thành phần cốt lõi sau:
+
+---
+
+### 1. Thông tin định danh (Metadata)
+
+Phần đầu tiên giúp quản lý tài liệu và phân định rõ phạm vi công việc:
+
+* **Mã Use Case / Tên Use Case:** (Ví dụ: `UC-CUST-01: Đồng bộ tồn kho real-time qua API với SAP`).
+* **Mô tả ngắn gọn:** Tính năng này dùng để làm gì, giải quyết bài toán gì cho nghiệp vụ.
+* **Tác nhân chính (Primary Actor):** Ai là người kích hoạt hoặc hệ thống nào khởi tạo (Ví dụ: Nhân viên kho, Hệ thống TMĐT, Webhook bên thứ ba).
+
+### 2. Tiền điều kiện & Hậu điều kiện (Pre-conditions & Post-conditions)
+
+* **Tiền điều kiện:** Hệ thống phải ở trạng thái nào trước khi Use Case này chạy? (Ví dụ: Đã cấu hình thành công API Key kết nối với SAP; Đơn hàng trên web đã chuyển sang trạng thái "Đã thanh toán").
+* **Hậu điều kiện:** Hệ thống sẽ thay đổi ra sao sau khi Use Case chạy thành công? (Ví dụ: Tồn kho trên website được trừ đi đúng số lượng đơn hàng; Trạng thái đồng bộ được ghi nhận là "Success" trong bảng log).
+
+### 3. Luồng sự kiện chính (Main Flow / Happy Path)
+
+Mô tả tuần tự các bước diễn ra khi mọi thứ suôn sẻ, không có lỗi phát sinh. Nên viết theo dạng bảng hoặc các bước đánh số rõ ràng:
+
+1. Hệ thống TMĐT ghi nhận sự kiện đơn hàng được thanh toán thành công.
+2. Middleware tự động trích xuất dữ liệu đơn hàng (Mã sản phẩm, số lượng, kho xuất).
+3. Middleware gọi API `POST /v1/inventory/deduct` sang hệ thống SAP.
+4. SAP tiếp nhận, xử lý trừ tồn kho thực tế và trả về mã phản hồi `HTTP 200 OK` kèm dữ liệu tồn kho mới nhất.
+5. Hệ thống TMĐT cập nhật lại số lượng tồn kho hiển thị trên giao diện quản trị.
+
+### 4. Luồng ngoại lệ & Xử lý lỗi (Alternative / Exception Flows)
+
+Đây là phần các lập trình viên rất quan tâm để đảm bảo hệ thống không bị crash khi có sự cố thực tế:
+
+* **Luồng 4a (Mất kết nối API với hệ thống ngoài):**
+* *Điều kiện:* Khi gọi API sang SAP nhưng server SAP timeout (quá 5 giây) hoặc trả về `HTTP 500`.
+* *Hệ thống xử lý:* Hệ thống TMĐT lưu trữ log lỗi vào hàng đợi (Queue), tự động thực hiện cơ chế thử lại (Retry) tối đa 3 lần cách nhau 5 phút. Nếu vẫn thất bại, bắn cảnh báo (Alert) qua Telegram/Email cho bộ phận IT vận hành xử lý thủ công.
+
+
+* **Luồng 4b (Hết hàng tại kho SAP):**
+* *Điều kiện:* Kho thực tế không đủ hàng để trừ dù khách đã đặt tiền trên web.
+* *Hệ thống xử lý:* Hủy tự động giao dịch hoặc chuyển đơn hàng sang trạng thái "Chờ xử lý đặc biệt" để nhân viên CSKH gọi điện cho khách.
+
+
+
+### 5. Yêu cầu dữ liệu & Giao diện (Data & UI Requirements)
+
+* **Quy tắc nghiệp vụ (Business Rules):** Các điều kiện logic chặt chẽ (Ví dụ: Tồn kho không bao giờ được phép âm; Nếu đồng bộ thất bại quá 3 lần phải khóa tính năng đặt hàng của sản phẩm đó tạm thời).
+* **Đặc tả API / Payload (nếu là tính năng tích hợp):** Cung cấp cấu trúc dữ liệu JSON mẫu gửi đi và nhận về giữa các hệ thống.
+* **Giao diện quản trị (Admin UI Spec):** Nếu tính năng custom có thêm màn hình quản lý mới trên trang Admin, cần kèm theo Wireframe hoặc mô tả rõ các trường dữ liệu (input text, dropdown, nút bấm) và quyền hạn (RBAC) ai được phép bấm nút nào.
+
+### 6. Tiêu chí nghiệm thu (Acceptance Criteria)
+
+Liệt kê các điều kiện cụ thể để QA hoặc Product Owner kiểm tra xem tính năng code xong đã đạt yêu cầu chưa (thường viết theo dạng BDD - Given/When/Then):
+
+* *Given* đơn hàng trị giá 2 sản phẩm A đã thanh toán thành công trên web,
+* *When* hệ thống gọi API đồng bộ sang SAP thành công,
+* *Then* số lượng tồn kho của sản phẩm A trên website phải tự động trừ đi 2, và lịch sử giao dịch ghi nhận log "Synced".
