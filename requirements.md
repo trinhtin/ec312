@@ -1,6 +1,6 @@
 # 1. Business Requirements
 
-Business requirement là **những yêu cầu cấp cao phản ánh mục tiêu, lợi ích, và nhu cầu kinh doanh** (không phải chi tiết chức năng cụ thể). Nó trả lời câu hỏi: *Doanh nghiệp muốn đạt được gì khi xây dựng hệ thống?*
+Business requirement là **những yêu cầu cấp cao phản ánh mục tiêu, lợi ích, và nhu cầu kinh doanh** (không phải chi tiết chức năng cụ thể). Trong bối cảnh Hệ thống TMĐT, nó trả lời câu hỏi: *Doanh nghiệp muốn đạt được gì khi go online / xây dựng Hệ thống TMĐT?*
 
 Ví dụ trong **hệ thống TMĐT (E-commerce)**:
 
