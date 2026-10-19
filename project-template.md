@@ -228,7 +228,7 @@ Biểu đồ trạng thái cho đối tượng “Đơn hàng” (Order)
 Dành cho đồ án thiên về **phân tích & thiết kế hệ thống**
 
 * Phân tích yêu cầu người dùng và xác định các chức năng chính của hệ thống TMĐT.
-* Thiết kế các mô hình **Use Case, Class, Sequence, Activity Diagram** để mô tả logic nghiệp vụ.
+* Thiết kế các mô hình **Use Case, Class, Sequence, State Machine Diagram, Activity Diagram** để mô tả logic nghiệp vụ.
 * Thiết kế cơ sở dữ liệu quan hệ (ERD) hỗ trợ các nghiệp vụ mua bán trực tuyến.
 * Xây dựng giao diện người dùng (UI) thân thiện, phù hợp với trải nghiệm khách hàng (UX).
 * Trình bày kiến trúc hệ thống (System Architecture) theo hướng **Layered hoặc Tiered**.
