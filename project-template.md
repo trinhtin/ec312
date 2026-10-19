@@ -110,6 +110,20 @@ Mỗi sinh viên viết đặc tả chi tiết cho 1 Use Case:
 
 * Vẽ sơ đồ tuần tự thể hiện luồng tương tác giữa các đối tượng khi thực hiện 1 Use Case cụ thể.
 
+#### **3.6. Biểu đồ trạng thái (State Machine Diagram)**
+
+* Mô hình hóa vòng đời và sự thay đổi trạng thái của một đối tượng cụ thể (có tính chất phức tạp) trong hệ thống khi bị tác động bởi các sự kiện (events).
+* Đối tượng thường được chọn để vẽ sơ đồ trạng thái trong TMĐT: Đơn hàng (Order), Tài khoản người dùng (User Account), Trạng thái thanh toán (Payment Status), hoặc Phiên làm việc giỏ hàng (Cart Session).
+* Cần xác định rõ: Trạng thái bắt đầu, các trạng thái trung gian, sự kiện kích hoạt chuyển trạng thái (transitions), và trạng thái kết thúc.
+
+**Ví dụ:**
+Biểu đồ trạng thái cho đối tượng “Đơn hàng” (Order)
+
+* **Trạng thái bắt đầu:** Khởi tạo (Created)
+* **Các trạng thái chính:** Chờ thanh toán (Pending Payment) $\rightarrow$ Đang xử lý (Processing) $\rightarrow$ Đang giao hàng (Shipping) $\rightarrow$ Đã giao (Delivered).
+* **Trạng thái ngoại lệ/kết thúc:** Đã hủy (Canceled), Đã hoàn tiền (Refunded).
+* **Sự kiện (Events):** Khách hàng chọn phương thức thanh toán, Gateway phản hồi thanh toán thành công, Admin xác nhận đóng gói, Shipper cập nhật giao thành công.
+
 ---
 
 ### **4. Thiết kế hệ thống (System Design)**
